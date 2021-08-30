@@ -1,0 +1,863 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13C9464726DCD52100E6B235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9464626DCD52100E6B235 /* AppDelegate.swift */; };
+		13C9464926DCD52100E6B235 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9464826DCD52100E6B235 /* SceneDelegate.swift */; };
+		13C9464B26DCD52100E6B235 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9464A26DCD52100E6B235 /* PostViewController.swift */; };
+		13C9465126DCD52100E6B235 /* FolkApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 13C9464F26DCD52100E6B235 /* FolkApp.xcdatamodeld */; };
+		13C9465326DCD52400E6B235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13C9465226DCD52400E6B235 /* Assets.xcassets */; };
+		13C9466126DCD52500E6B235 /* FolkAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9466026DCD52500E6B235 /* FolkAppTests.swift */; };
+		13C9466C26DCD52500E6B235 /* FolkAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9466B26DCD52500E6B235 /* FolkAppUITests.swift */; };
+		13C9468226DCD6FA00E6B235 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9468126DCD6FA00E6B235 /* Constants.swift */; };
+		13C9468B26DCDA1A00E6B235 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9468A26DCDA1A00E6B235 /* CoreDataManager.swift */; };
+		7907198F06D7B600B5B1163E /* Pods_FolkApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84461EC371A293CD50EAA39 /* Pods_FolkApp.framework */; };
+		89024E2F611BCB267FF75A75 /* Pods_FolkApp_FolkAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF2705476898FAD3FDD78627 /* Pods_FolkApp_FolkAppUITests.framework */; };
+		FF8A5D011CD1969472AA2A9B /* Pods_FolkAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C786ED4A0A26A02816FFABA /* Pods_FolkAppTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		13C9465D26DCD52500E6B235 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13C9463B26DCD52000E6B235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13C9464226DCD52100E6B235;
+			remoteInfo = FolkApp;
+		};
+		13C9466826DCD52500E6B235 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13C9463B26DCD52000E6B235 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13C9464226DCD52100E6B235;
+			remoteInfo = FolkApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		13C9464326DCD52100E6B235 /* FolkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FolkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13C9464626DCD52100E6B235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		13C9464826DCD52100E6B235 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		13C9464A26DCD52100E6B235 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		13C9465026DCD52100E6B235 /* FolkApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FolkApp.xcdatamodel; sourceTree = "<group>"; };
+		13C9465226DCD52400E6B235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		13C9465726DCD52400E6B235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13C9465C26DCD52500E6B235 /* FolkAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FolkAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13C9466026DCD52500E6B235 /* FolkAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolkAppTests.swift; sourceTree = "<group>"; };
+		13C9466226DCD52500E6B235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13C9466726DCD52500E6B235 /* FolkAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FolkAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13C9466B26DCD52500E6B235 /* FolkAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolkAppUITests.swift; sourceTree = "<group>"; };
+		13C9466D26DCD52500E6B235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13C9468126DCD6FA00E6B235 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		13C9468A26DCDA1A00E6B235 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		143856328076421218BBCE16 /* Pods-FolkAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FolkAppTests.release.xcconfig"; path = "Target Support Files/Pods-FolkAppTests/Pods-FolkAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		369FB9AE9423FAF84C36AE31 /* Pods-FolkAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FolkAppTests.debug.xcconfig"; path = "Target Support Files/Pods-FolkAppTests/Pods-FolkAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		790902897B5CF104BD0074FC /* Pods-FolkApp-FolkAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FolkApp-FolkAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-FolkApp-FolkAppUITests/Pods-FolkApp-FolkAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7CD17C4D0654645877AAB45C /* Pods-FolkApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FolkApp.debug.xcconfig"; path = "Target Support Files/Pods-FolkApp/Pods-FolkApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8C786ED4A0A26A02816FFABA /* Pods_FolkAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FolkAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1D4143E6DB2A26E959FA8F8 /* Pods-FolkApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FolkApp.release.xcconfig"; path = "Target Support Files/Pods-FolkApp/Pods-FolkApp.release.xcconfig"; sourceTree = "<group>"; };
+		C84461EC371A293CD50EAA39 /* Pods_FolkApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FolkApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D388BA107193745480142160 /* Pods-FolkApp-FolkAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FolkApp-FolkAppUITests.release.xcconfig"; path = "Target Support Files/Pods-FolkApp-FolkAppUITests/Pods-FolkApp-FolkAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DF2705476898FAD3FDD78627 /* Pods_FolkApp_FolkAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FolkApp_FolkAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13C9464026DCD52100E6B235 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7907198F06D7B600B5B1163E /* Pods_FolkApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13C9465926DCD52500E6B235 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF8A5D011CD1969472AA2A9B /* Pods_FolkAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13C9466426DCD52500E6B235 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89024E2F611BCB267FF75A75 /* Pods_FolkApp_FolkAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13C9463A26DCD52000E6B235 = {
+			isa = PBXGroup;
+			children = (
+				13C9464526DCD52100E6B235 /* FolkApp */,
+				13C9465F26DCD52500E6B235 /* FolkAppTests */,
+				13C9466A26DCD52500E6B235 /* FolkAppUITests */,
+				13C9464426DCD52100E6B235 /* Products */,
+				EF1A22E77E4C5F21848B67FB /* Pods */,
+				C1F45334B9C186E1DB5C136C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		13C9464426DCD52100E6B235 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13C9464326DCD52100E6B235 /* FolkApp.app */,
+				13C9465C26DCD52500E6B235 /* FolkAppTests.xctest */,
+				13C9466726DCD52500E6B235 /* FolkAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		13C9464526DCD52100E6B235 /* FolkApp */ = {
+			isa = PBXGroup;
+			children = (
+				13C9468026DCD6E900E6B235 /* Constants */,
+				13C9467E26DCD5A700E6B235 /* SupportFiles */,
+				13C9468826DCD9FE00E6B235 /* Core Data */,
+				13C9468326DCD9D500E6B235 /* PostDetails */,
+				13C9467926DCD57B00E6B235 /* Post */,
+				13C9465226DCD52400E6B235 /* Assets.xcassets */,
+				13C9465726DCD52400E6B235 /* Info.plist */,
+			);
+			path = FolkApp;
+			sourceTree = "<group>";
+		};
+		13C9465F26DCD52500E6B235 /* FolkAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				13C9466026DCD52500E6B235 /* FolkAppTests.swift */,
+				13C9466226DCD52500E6B235 /* Info.plist */,
+			);
+			path = FolkAppTests;
+			sourceTree = "<group>";
+		};
+		13C9466A26DCD52500E6B235 /* FolkAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				13C9466B26DCD52500E6B235 /* FolkAppUITests.swift */,
+				13C9466D26DCD52500E6B235 /* Info.plist */,
+			);
+			path = FolkAppUITests;
+			sourceTree = "<group>";
+		};
+		13C9467926DCD57B00E6B235 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				13C9467D26DCD59500E6B235 /* ViewModel */,
+				13C9467C26DCD59000E6B235 /* Model */,
+				13C9467B26DCD58A00E6B235 /* Controller */,
+				13C9467A26DCD58600E6B235 /* View */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		13C9467A26DCD58600E6B235 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		13C9467B26DCD58A00E6B235 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				13C9464A26DCD52100E6B235 /* PostViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		13C9467C26DCD59000E6B235 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		13C9467D26DCD59500E6B235 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		13C9467E26DCD5A700E6B235 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				13C9464826DCD52100E6B235 /* SceneDelegate.swift */,
+				13C9464626DCD52100E6B235 /* AppDelegate.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		13C9468026DCD6E900E6B235 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				13C9468126DCD6FA00E6B235 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		13C9468326DCD9D500E6B235 /* PostDetails */ = {
+			isa = PBXGroup;
+			children = (
+				13C9468726DCD9F700E6B235 /* Controller */,
+				13C9468626DCD9F200E6B235 /* ViewModel */,
+				13C9468526DCD9ED00E6B235 /* Model */,
+				13C9468426DCD9E900E6B235 /* View */,
+			);
+			path = PostDetails;
+			sourceTree = "<group>";
+		};
+		13C9468426DCD9E900E6B235 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		13C9468526DCD9ED00E6B235 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		13C9468626DCD9F200E6B235 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		13C9468726DCD9F700E6B235 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		13C9468826DCD9FE00E6B235 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				13C9468926DCDA0900E6B235 /* CoreDataManager */,
+				13C9464F26DCD52100E6B235 /* FolkApp.xcdatamodeld */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		13C9468926DCDA0900E6B235 /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				13C9468A26DCDA1A00E6B235 /* CoreDataManager.swift */,
+			);
+			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
+		C1F45334B9C186E1DB5C136C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C84461EC371A293CD50EAA39 /* Pods_FolkApp.framework */,
+				DF2705476898FAD3FDD78627 /* Pods_FolkApp_FolkAppUITests.framework */,
+				8C786ED4A0A26A02816FFABA /* Pods_FolkAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF1A22E77E4C5F21848B67FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7CD17C4D0654645877AAB45C /* Pods-FolkApp.debug.xcconfig */,
+				B1D4143E6DB2A26E959FA8F8 /* Pods-FolkApp.release.xcconfig */,
+				790902897B5CF104BD0074FC /* Pods-FolkApp-FolkAppUITests.debug.xcconfig */,
+				D388BA107193745480142160 /* Pods-FolkApp-FolkAppUITests.release.xcconfig */,
+				369FB9AE9423FAF84C36AE31 /* Pods-FolkAppTests.debug.xcconfig */,
+				143856328076421218BBCE16 /* Pods-FolkAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13C9464226DCD52100E6B235 /* FolkApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13C9467026DCD52500E6B235 /* Build configuration list for PBXNativeTarget "FolkApp" */;
+			buildPhases = (
+				6E7EF98425BBF6317184065D /* [CP] Check Pods Manifest.lock */,
+				13C9463F26DCD52100E6B235 /* Sources */,
+				13C9464026DCD52100E6B235 /* Frameworks */,
+				13C9464126DCD52100E6B235 /* Resources */,
+				59A31DF0EC38E01BE80B0917 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FolkApp;
+			productName = FolkApp;
+			productReference = 13C9464326DCD52100E6B235 /* FolkApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		13C9465B26DCD52500E6B235 /* FolkAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13C9467326DCD52500E6B235 /* Build configuration list for PBXNativeTarget "FolkAppTests" */;
+			buildPhases = (
+				FAE2BF1038219E890C2A7C0D /* [CP] Check Pods Manifest.lock */,
+				13C9465826DCD52500E6B235 /* Sources */,
+				13C9465926DCD52500E6B235 /* Frameworks */,
+				13C9465A26DCD52500E6B235 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13C9465E26DCD52500E6B235 /* PBXTargetDependency */,
+			);
+			name = FolkAppTests;
+			productName = FolkAppTests;
+			productReference = 13C9465C26DCD52500E6B235 /* FolkAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		13C9466626DCD52500E6B235 /* FolkAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13C9467626DCD52500E6B235 /* Build configuration list for PBXNativeTarget "FolkAppUITests" */;
+			buildPhases = (
+				7B176D1732BAE82749F8D9E7 /* [CP] Check Pods Manifest.lock */,
+				13C9466326DCD52500E6B235 /* Sources */,
+				13C9466426DCD52500E6B235 /* Frameworks */,
+				13C9466526DCD52500E6B235 /* Resources */,
+				2E76EEEEED3C87EE66AA8CBA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				13C9466926DCD52500E6B235 /* PBXTargetDependency */,
+			);
+			name = FolkAppUITests;
+			productName = FolkAppUITests;
+			productReference = 13C9466726DCD52500E6B235 /* FolkAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		13C9463B26DCD52000E6B235 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					13C9464226DCD52100E6B235 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					13C9465B26DCD52500E6B235 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 13C9464226DCD52100E6B235;
+					};
+					13C9466626DCD52500E6B235 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 13C9464226DCD52100E6B235;
+					};
+				};
+			};
+			buildConfigurationList = 13C9463E26DCD52000E6B235 /* Build configuration list for PBXProject "FolkApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 13C9463A26DCD52000E6B235;
+			productRefGroup = 13C9464426DCD52100E6B235 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13C9464226DCD52100E6B235 /* FolkApp */,
+				13C9465B26DCD52500E6B235 /* FolkAppTests */,
+				13C9466626DCD52500E6B235 /* FolkAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13C9464126DCD52100E6B235 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13C9465326DCD52400E6B235 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13C9465A26DCD52500E6B235 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13C9466526DCD52500E6B235 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E76EEEEED3C87EE66AA8CBA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FolkApp-FolkAppUITests/Pods-FolkApp-FolkAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FolkApp-FolkAppUITests/Pods-FolkApp-FolkAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FolkApp-FolkAppUITests/Pods-FolkApp-FolkAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59A31DF0EC38E01BE80B0917 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FolkApp/Pods-FolkApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FolkApp/Pods-FolkApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FolkApp/Pods-FolkApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E7EF98425BBF6317184065D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FolkApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B176D1732BAE82749F8D9E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FolkApp-FolkAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAE2BF1038219E890C2A7C0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FolkAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13C9463F26DCD52100E6B235 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13C9468B26DCDA1A00E6B235 /* CoreDataManager.swift in Sources */,
+				13C9468226DCD6FA00E6B235 /* Constants.swift in Sources */,
+				13C9464B26DCD52100E6B235 /* PostViewController.swift in Sources */,
+				13C9465126DCD52100E6B235 /* FolkApp.xcdatamodeld in Sources */,
+				13C9464726DCD52100E6B235 /* AppDelegate.swift in Sources */,
+				13C9464926DCD52100E6B235 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13C9465826DCD52500E6B235 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13C9466126DCD52500E6B235 /* FolkAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		13C9466326DCD52500E6B235 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13C9466C26DCD52500E6B235 /* FolkAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		13C9465E26DCD52500E6B235 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13C9464226DCD52100E6B235 /* FolkApp */;
+			targetProxy = 13C9465D26DCD52500E6B235 /* PBXContainerItemProxy */;
+		};
+		13C9466926DCD52500E6B235 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13C9464226DCD52100E6B235 /* FolkApp */;
+			targetProxy = 13C9466826DCD52500E6B235 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		13C9466E26DCD52500E6B235 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		13C9466F26DCD52500E6B235 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		13C9467126DCD52500E6B235 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CD17C4D0654645877AAB45C /* Pods-FolkApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L4NFNF42EH;
+				INFOPLIST_FILE = FolkApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HamzaAlmass.FolkApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		13C9467226DCD52500E6B235 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1D4143E6DB2A26E959FA8F8 /* Pods-FolkApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L4NFNF42EH;
+				INFOPLIST_FILE = FolkApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HamzaAlmass.FolkApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		13C9467426DCD52500E6B235 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 369FB9AE9423FAF84C36AE31 /* Pods-FolkAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L4NFNF42EH;
+				INFOPLIST_FILE = FolkAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HamzaAlmass.FolkAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FolkApp.app/FolkApp";
+			};
+			name = Debug;
+		};
+		13C9467526DCD52500E6B235 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 143856328076421218BBCE16 /* Pods-FolkAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L4NFNF42EH;
+				INFOPLIST_FILE = FolkAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HamzaAlmass.FolkAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FolkApp.app/FolkApp";
+			};
+			name = Release;
+		};
+		13C9467726DCD52500E6B235 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 790902897B5CF104BD0074FC /* Pods-FolkApp-FolkAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L4NFNF42EH;
+				INFOPLIST_FILE = FolkAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HamzaAlmass.FolkAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FolkApp;
+			};
+			name = Debug;
+		};
+		13C9467826DCD52500E6B235 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D388BA107193745480142160 /* Pods-FolkApp-FolkAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L4NFNF42EH;
+				INFOPLIST_FILE = FolkAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HamzaAlmass.FolkAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FolkApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13C9463E26DCD52000E6B235 /* Build configuration list for PBXProject "FolkApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13C9466E26DCD52500E6B235 /* Debug */,
+				13C9466F26DCD52500E6B235 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13C9467026DCD52500E6B235 /* Build configuration list for PBXNativeTarget "FolkApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13C9467126DCD52500E6B235 /* Debug */,
+				13C9467226DCD52500E6B235 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13C9467326DCD52500E6B235 /* Build configuration list for PBXNativeTarget "FolkAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13C9467426DCD52500E6B235 /* Debug */,
+				13C9467526DCD52500E6B235 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		13C9467626DCD52500E6B235 /* Build configuration list for PBXNativeTarget "FolkAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13C9467726DCD52500E6B235 /* Debug */,
+				13C9467826DCD52500E6B235 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		13C9464F26DCD52100E6B235 /* FolkApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				13C9465026DCD52100E6B235 /* FolkApp.xcdatamodel */,
+			);
+			currentVersion = 13C9465026DCD52100E6B235 /* FolkApp.xcdatamodel */;
+			path = FolkApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 13C9463B26DCD52000E6B235 /* Project object */;
+}

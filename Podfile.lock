@@ -1,0 +1,42 @@
+PODS:
+  - EasyPeasy (1.10.0)
+  - lottie-ios (3.2.3)
+  - Onboard (2.3.3)
+  - PaddingLabel (1.2)
+  - RxCocoa (6.1.0):
+    - RxRelay (= 6.1.0)
+    - RxSwift (= 6.1.0)
+  - RxRelay (6.1.0):
+    - RxSwift (= 6.1.0)
+  - RxSwift (6.1.0)
+
+DEPENDENCIES:
+  - EasyPeasy
+  - lottie-ios
+  - Onboard
+  - PaddingLabel (= 1.2)
+  - RxCocoa (= 6.1.0)
+  - RxSwift (= 6.1.0)
+
+SPEC REPOS:
+  trunk:
+    - EasyPeasy
+    - lottie-ios
+    - Onboard
+    - PaddingLabel
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+
+SPEC CHECKSUMS:
+  EasyPeasy: b9b1bae024d21a7dfa9bad26d6826d88348cc6f1
+  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
+  Onboard: 4d6e943e20bdd6bc229df967a347dd7514bc2a6f
+  PaddingLabel: 21ab5282c780366018b04c30e3920c2f55a2fd14
+  RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
+  RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
+  RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
+
+PODFILE CHECKSUM: 2750d36e19b536c61d5f4d4eb07ecffeafa01c3a
+
+COCOAPODS: 1.10.1

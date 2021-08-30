@@ -1,0 +1,6 @@
+framework module Pods_FolkApp_FolkAppUITests {
+  umbrella header "Pods-FolkApp-FolkAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
