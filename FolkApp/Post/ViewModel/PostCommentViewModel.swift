@@ -9,27 +9,43 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-struct PostCommentListViewModel {
+struct PostListViewModel {
     
-    private let disposeBag = DisposeBag()
-    
+    let disposeBag = DisposeBag()
     private let dataService: DataService<[Post]>
-    private var posts: BehaviorRelay<[Post]> = .init(value: [])
+    
+    var posts: BehaviorRelay<[Post]> = .init(value: [])
     
     init(dataService: DataService<[Post]>){
         self.dataService = dataService
     }
     
     func fetchAllPosts(url: String) {
-        dataService.fetchPosts(url: url).subscribe(onNext: { (posts) in
-            self.posts.accept(posts)
+        var counterUserNameFetched = 0
+        dataService.fetch(url: url).asObservable().subscribe(onNext: { (posts) in
+            posts.forEach({ (post) in
+                post.fetchPostUserName(url: "https://jsonplaceholder.typicode.com/users?id=\(post.userId ?? 0)") { (error) in
+                    if let error = error {
+                        print(error)
+                        return
+                    }
+                    counterUserNameFetched += 1
+                    if counterUserNameFetched == posts.count {
+                        self.posts.accept(posts)
+                    }
+                    print("Fetch the user name")
+                }
+            })
+           
         }).disposed(by: disposeBag)
     }
     
     
 }
 
-struct PostCommentViewModel {
+struct PostViewModel {
+    
+    let disposeBag = DisposeBag()
     
     private let post: Post
     

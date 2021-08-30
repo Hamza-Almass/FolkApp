@@ -41,11 +41,12 @@ class Post: Codable {
             }
             guard let data = data else { return }
             
-            guard let user = try? JSONDecoder().decode(User.self, from: data) else {
+            guard let user = try? JSONDecoder().decode([User].self, from: data) else {
                 completion("Can't decode the user object")
                 return
             }
-            self.username = user.username
+            self.username = user.first?.username
+            completion(nil)
         }.resume()
     }
     
