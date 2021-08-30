@@ -12,8 +12,10 @@ class PostTableViewCell: UITableViewCell {
     
     private let iconImageView:UIImageView = {
         let imageView = UIImageView()
-        imageView.image = nil
-        imageView.backgroundColor = .yellow
+        imageView.image = UIImage(named: "lines")?.withRenderingMode(.alwaysTemplate)
+        imageView.tintColor = .lightGray
+        imageView.layer.borderColor = UIColor.lightGray.cgColor
+        imageView.layer.borderWidth = 1
         imageView.layer.cornerRadius = 20
         imageView.clipsToBounds = true
         return imageView
@@ -46,7 +48,7 @@ class PostTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = UIColor(named: kBGCOLOR)
-        contentView.backgroundColor = .white
+        contentView.backgroundColor = UIColor(named: kBGCELLCOLOR)
         contentView.layer.cornerRadius = 8
         contentView.clipsToBounds = true
         setupUI()

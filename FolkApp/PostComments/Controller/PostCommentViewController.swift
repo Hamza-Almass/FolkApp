@@ -42,9 +42,6 @@ class PostCommentViewController: UIViewController , UITableViewDelegate {
                 s.animationView.isHidden = true
             }
             if let _ = error {
-                DispatchQueue.main.async {
-                   // s.showSPAlert(title: "Error", message: error.localizedDescription, iconPreset: .error, haptic: .error)
-                }
                 return
             }
         }
@@ -64,7 +61,7 @@ class PostCommentViewController: UIViewController , UITableViewDelegate {
     
     private func setupUI(){
         view.addSubview(tableView)
-        tableView.easy.layout(Edges(16))
+        tableView.easy.layout(Edges(0))
     }
     
     private func bindUI(){
@@ -92,10 +89,13 @@ extension PostCommentViewController {
     fileprivate func createHeaderView(userName: String , title: String , body: String) -> UIView {
        
         let v = UIView()
-        v.backgroundColor = .white
+        v.backgroundColor = UIColor(named: kBGCELLCOLOR)
         
         let imageView = UIImageView()
-        imageView.backgroundColor = .yellow
+        imageView.image = UIImage(named: "lines")?.withRenderingMode(.alwaysTemplate)
+        imageView.tintColor = .lightGray
+        imageView.layer.borderColor = UIColor.lightGray.cgColor
+        imageView.layer.borderWidth = 1
         imageView.layer.cornerRadius = 20
         imageView.clipsToBounds = true
         

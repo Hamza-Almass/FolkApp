@@ -38,7 +38,8 @@ class PageViewController: UIPageViewController , UIPageViewControllerDelegate , 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        
+        view.backgroundColor = UIColor(named: kBGCOLOR)
         
         view.accessibilityIdentifier = "onboardingView"
         

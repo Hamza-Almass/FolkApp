@@ -19,8 +19,11 @@ class PostCommentTableViewCell: UITableViewCell {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 20
         imageView.clipsToBounds = true
-        imageView.image = nil
-        imageView.backgroundColor = .yellow
+        imageView.image = UIImage(named: "lines")?.withRenderingMode(.alwaysTemplate)
+        imageView.tintColor = .lightGray
+        imageView.layer.borderWidth = 1
+        imageView.layer.borderColor = UIColor.lightGray.cgColor
+        imageView.backgroundColor = .clear
         return imageView
     }()
     
@@ -48,7 +51,7 @@ class PostCommentTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+        contentView.backgroundColor = UIColor(named: kBGCELLCOLOR)
         setupUI()
     }
     

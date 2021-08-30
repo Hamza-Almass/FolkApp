@@ -25,6 +25,21 @@ class PostViewController: UIViewController {
         return tableView
     }()
     
+    //MARK:- Post VC properties
+    let navbarTextImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "helloFolk")
+        imageView.backgroundColor = .clear
+        return imageView
+    }()
+   
+    let navbarLineImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "lines")
+        imageView.backgroundColor = .clear
+        return imageView
+    }()
+    
     private let dataService: DataService<[Post]> = .init()
     private var postListVM: PostListViewModel!
     private var animationView: AnimationView!
@@ -36,8 +51,21 @@ class PostViewController: UIViewController {
         
         onBordingView()
         setupUI()
-//        fetchPosts()
-//        bindUI()
+        setupNavBarIcons()
+    }
+    
+    private func setupNavBarIcons(){
+        
+        let iconNavbarHStackView = UIStackView(arrangedSubviews: [navbarLineImageView , navbarTextImageView])
+        iconNavbarHStackView.axis = .horizontal
+        iconNavbarHStackView.alignment = .fill
+        iconNavbarHStackView.distribution = .fill
+        iconNavbarHStackView.spacing = 5
+        navbarLineImageView.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        navbarLineImageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        iconNavbarHStackView.tag = 1000
+        navigationController?.navigationBar.addSubview(iconNavbarHStackView)
+        iconNavbarHStackView.easy.layout(CenterX(0),CenterY(0),Width(self.view.frame.width * 0.3))
         
     }
     
