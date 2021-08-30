@@ -9,6 +9,7 @@ import UIKit
 import EasyPeasy
 import RxSwift
 import RxCocoa
+import SPAlert
 
 class PostViewController: UIViewController {
 
@@ -38,7 +39,18 @@ class PostViewController: UIViewController {
     
     private func fetchPosts(){
         postListVM = PostListViewModel(dataService: dataService)
-        postListVM.fetchAllPosts(url: "https://jsonplaceholder.typicode.com/posts")
+        postListVM.fetchAllPosts(url: "https://jsonplaceholder.typicode.com/posts") { [weak self] (error)  in
+            guard let s = self else { return }
+            if let error = error {
+                DispatchQueue.main.async {
+                    s.showSPAlert(title: "Error", message: error.localizedDescription, iconPreset: .error, haptic: .error)
+                    return
+                }
+            }
+            if s.postListVM.posts.value.count == 0 {
+                s.postListVM.fetchObjectsFromCoreData()
+            }
+        }
     }
     
     private func setupUI(){

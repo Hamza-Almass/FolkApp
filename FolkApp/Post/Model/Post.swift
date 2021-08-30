@@ -31,7 +31,6 @@ class Post: Codable {
         self.userId = userId
     }
     
-    
     func fetchPostUserName(url: String,completion: @escaping(_ error: String?) -> Void){
         guard let url = URL(string: url) else { return }
         URLSession.shared.dataTask(with: url) { (data , res , error) in

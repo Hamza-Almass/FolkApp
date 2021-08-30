@@ -15,17 +15,25 @@ class DataService<Element: Codable> {
     
     func fetch(url: String) -> Observable<Element> {
         return Observable.create { observer -> Disposable in
-          Observable.just(url).map({ (str) -> URL in
+            Observable.just(url).map({ (str) -> URL in
                 return URL(string: str)!
             }).map({ (url) -> URLRequest in
                 return URLRequest(url: url)
             }).flatMap{ request -> Observable<(response: HTTPURLResponse, data: Data)> in
-                return URLSession.shared.rx.response(request: request)
-            }.share(replay: 1, scope: .whileConnected).subscribe(onNext: { (response) in
+                let response = URLSession.shared.rx.response(request: request)
+                response.asObservable().subscribe { result in
+                    
+                } onError: { error in
+                    observer.onError(error)
+                }.disposed(by: self.disposeBag)
+                return response
+            }
+            .share(replay: 1, scope: .whileConnected).subscribe(onNext: { (response) in
                 guard let elements = try? JSONDecoder().decode(Element.self, from: response.data) else { return }
                 observer.onNext(elements)
                 observer.onCompleted()
-            }).disposed(by: self.disposeBag)
+            })
+            .disposed(by: self.disposeBag)
             return Disposables.create()
         }
     }

@@ -13,6 +13,7 @@ target 'FolkApp' do
     pod 'RxCocoa', '6.1.0'
     pod "EasyPeasy"
     pod 'SwifterSwift'
+    pod 'SPAlert'
 
   target 'FolkAppTests' do
     inherit! :search_paths

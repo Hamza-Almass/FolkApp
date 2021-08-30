@@ -9,6 +9,7 @@ PODS:
   - RxRelay (6.1.0):
     - RxSwift (= 6.1.0)
   - RxSwift (6.1.0)
+  - SPAlert (3.3.0)
   - SwifterSwift (5.2.0):
     - SwifterSwift/AppKit (= 5.2.0)
     - SwifterSwift/CoreAnimation (= 5.2.0)
@@ -42,6 +43,7 @@ DEPENDENCIES:
   - PaddingLabel (= 1.2)
   - RxCocoa (= 6.1.0)
   - RxSwift (= 6.1.0)
+  - SPAlert
   - SwifterSwift
 
 SPEC REPOS:
@@ -53,6 +55,7 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SPAlert
     - SwifterSwift
 
 SPEC CHECKSUMS:
@@ -63,8 +66,9 @@ SPEC CHECKSUMS:
   RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
   RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
   RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
+  SPAlert: 3a4cd946589a1b75a047facb2422e472169f949c
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
 
-PODFILE CHECKSUM: c86b29c228341b6f4d6585e6447f832c36c8091e
+PODFILE CHECKSUM: 2658941ca482e21ca5f9d16c729018b9b419d5be
 
 COCOAPODS: 1.10.1

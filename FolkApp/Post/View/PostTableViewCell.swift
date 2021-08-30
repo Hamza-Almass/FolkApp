@@ -8,7 +8,6 @@
 import EasyPeasy
 import UIKit
 
-
 class PostTableViewCell: UITableViewCell {
     
     private let iconImageView:UIImageView = {
@@ -38,7 +37,7 @@ class PostTableViewCell: UITableViewCell {
     private let bodyLabel: UILabel = {
         let label = UILabel()
         label.text = "body label"
-        label.textColor = UIColor(named: kTITLECOLOR)
+        label.textColor = UIColor(named: kTEXTCOLOR)?.withAlphaComponent(0.6)
         label.numberOfLines = 0
         return label
     }()
