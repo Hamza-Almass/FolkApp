@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,10 @@
 		13C9466C26DCD52500E6B235 /* FolkAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9466B26DCD52500E6B235 /* FolkAppUITests.swift */; };
 		13C9468226DCD6FA00E6B235 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9468126DCD6FA00E6B235 /* Constants.swift */; };
 		13C9468B26DCDA1A00E6B235 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9468A26DCDA1A00E6B235 /* CoreDataManager.swift */; };
+		13C9468D26DCF0F200E6B235 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9468C26DCF0F200E6B235 /* Post.swift */; };
+		13C9468F26DCF51000E6B235 /* PostComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9468E26DCF51000E6B235 /* PostComment.swift */; };
+		13C9469126DCF55300E6B235 /* PostCommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9469026DCF55300E6B235 /* PostCommentViewModel.swift */; };
+		13C9469426DCF57E00E6B235 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9469326DCF57E00E6B235 /* DataService.swift */; };
 		7907198F06D7B600B5B1163E /* Pods_FolkApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84461EC371A293CD50EAA39 /* Pods_FolkApp.framework */; };
 		89024E2F611BCB267FF75A75 /* Pods_FolkApp_FolkAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF2705476898FAD3FDD78627 /* Pods_FolkApp_FolkAppUITests.framework */; };
 		FF8A5D011CD1969472AA2A9B /* Pods_FolkAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C786ED4A0A26A02816FFABA /* Pods_FolkAppTests.framework */; };
@@ -54,6 +58,10 @@
 		13C9466D26DCD52500E6B235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13C9468126DCD6FA00E6B235 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		13C9468A26DCDA1A00E6B235 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		13C9468C26DCF0F200E6B235 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		13C9468E26DCF51000E6B235 /* PostComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostComment.swift; sourceTree = "<group>"; };
+		13C9469026DCF55300E6B235 /* PostCommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentViewModel.swift; sourceTree = "<group>"; };
+		13C9469326DCF57E00E6B235 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		143856328076421218BBCE16 /* Pods-FolkAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FolkAppTests.release.xcconfig"; path = "Target Support Files/Pods-FolkAppTests/Pods-FolkAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		369FB9AE9423FAF84C36AE31 /* Pods-FolkAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FolkAppTests.debug.xcconfig"; path = "Target Support Files/Pods-FolkAppTests/Pods-FolkAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		790902897B5CF104BD0074FC /* Pods-FolkApp-FolkAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FolkApp-FolkAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-FolkApp-FolkAppUITests/Pods-FolkApp-FolkAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,10 +126,11 @@
 		13C9464526DCD52100E6B235 /* FolkApp */ = {
 			isa = PBXGroup;
 			children = (
+				13C9469226DCF57000E6B235 /* DataService */,
 				13C9468026DCD6E900E6B235 /* Constants */,
 				13C9467E26DCD5A700E6B235 /* SupportFiles */,
 				13C9468826DCD9FE00E6B235 /* Core Data */,
-				13C9468326DCD9D500E6B235 /* PostDetails */,
+				13C9468326DCD9D500E6B235 /* PostComments */,
 				13C9467926DCD57B00E6B235 /* Post */,
 				13C9465226DCD52400E6B235 /* Assets.xcassets */,
 				13C9465726DCD52400E6B235 /* Info.plist */,
@@ -176,6 +185,7 @@
 		13C9467C26DCD59000E6B235 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				13C9468C26DCF0F200E6B235 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,6 +193,7 @@
 		13C9467D26DCD59500E6B235 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				13C9469026DCF55300E6B235 /* PostCommentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -204,7 +215,7 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		13C9468326DCD9D500E6B235 /* PostDetails */ = {
+		13C9468326DCD9D500E6B235 /* PostComments */ = {
 			isa = PBXGroup;
 			children = (
 				13C9468726DCD9F700E6B235 /* Controller */,
@@ -212,7 +223,7 @@
 				13C9468526DCD9ED00E6B235 /* Model */,
 				13C9468426DCD9E900E6B235 /* View */,
 			);
-			path = PostDetails;
+			path = PostComments;
 			sourceTree = "<group>";
 		};
 		13C9468426DCD9E900E6B235 /* View */ = {
@@ -225,6 +236,7 @@
 		13C9468526DCD9ED00E6B235 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				13C9468E26DCF51000E6B235 /* PostComment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -260,6 +272,14 @@
 			path = CoreDataManager;
 			sourceTree = "<group>";
 		};
+		13C9469226DCF57000E6B235 /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				13C9469326DCF57E00E6B235 /* DataService.swift */,
+			);
+			path = DataService;
+			sourceTree = "<group>";
+		};
 		C1F45334B9C186E1DB5C136C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,7 +300,6 @@
 				369FB9AE9423FAF84C36AE31 /* Pods-FolkAppTests.debug.xcconfig */,
 				143856328076421218BBCE16 /* Pods-FolkAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -523,8 +542,12 @@
 				13C9468B26DCDA1A00E6B235 /* CoreDataManager.swift in Sources */,
 				13C9468226DCD6FA00E6B235 /* Constants.swift in Sources */,
 				13C9464B26DCD52100E6B235 /* PostViewController.swift in Sources */,
+				13C9469426DCF57E00E6B235 /* DataService.swift in Sources */,
+				13C9468F26DCF51000E6B235 /* PostComment.swift in Sources */,
 				13C9465126DCD52100E6B235 /* FolkApp.xcdatamodeld in Sources */,
 				13C9464726DCD52100E6B235 /* AppDelegate.swift in Sources */,
+				13C9468D26DCF0F200E6B235 /* Post.swift in Sources */,
+				13C9469126DCF55300E6B235 /* PostCommentViewModel.swift in Sources */,
 				13C9464926DCD52100E6B235 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
