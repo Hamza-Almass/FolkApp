@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		13090C2626DD602B007269DF /* UIApplication + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13090C2526DD602B007269DF /* UIApplication + Extension.swift */; };
+		13090C2B26DD61F1007269DF /* 57182-boy-touch-tablet.json in Resources */ = {isa = PBXBuildFile; fileRef = 13090C2826DD61F1007269DF /* 57182-boy-touch-tablet.json */; };
+		13090C2C26DD61F1007269DF /* 57183-character-draw-in-the-air.json in Resources */ = {isa = PBXBuildFile; fileRef = 13090C2926DD61F1007269DF /* 57183-character-draw-in-the-air.json */; };
+		13090C2D26DD61F1007269DF /* 8311-loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 13090C2A26DD61F1007269DF /* 8311-loading.json */; };
+		13090C2F26DD7455007269DF /* PostCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13090C2E26DD7455007269DF /* PostCommentViewController.swift */; };
+		13090C3126DD7495007269DF /* PostCommentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13090C3026DD7495007269DF /* PostCommentListViewModel.swift */; };
+		13090C3326DD780A007269DF /* PostCommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13090C3226DD780A007269DF /* PostCommentTableViewCell.swift */; };
+		13090C3626DD9401007269DF /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13090C3526DD9401007269DF /* PageViewController.swift */; };
+		13090C3926DD9562007269DF /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13090C3826DD9562007269DF /* PageVC.swift */; };
+		13090C3C26DD9900007269DF /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13090C3B26DD9900007269DF /* LaunchScreenVC.swift */; };
 		13C9464726DCD52100E6B235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9464626DCD52100E6B235 /* AppDelegate.swift */; };
 		13C9464926DCD52100E6B235 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9464826DCD52100E6B235 /* SceneDelegate.swift */; };
 		13C9464B26DCD52100E6B235 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9464A26DCD52100E6B235 /* PostViewController.swift */; };
@@ -46,6 +55,15 @@
 
 /* Begin PBXFileReference section */
 		13090C2526DD602B007269DF /* UIApplication + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIApplication + Extension.swift"; path = "../../../../../../../Applications/UIApplication + Extension.swift"; sourceTree = "<group>"; };
+		13090C2826DD61F1007269DF /* 57182-boy-touch-tablet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "57182-boy-touch-tablet.json"; sourceTree = "<group>"; };
+		13090C2926DD61F1007269DF /* 57183-character-draw-in-the-air.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "57183-character-draw-in-the-air.json"; sourceTree = "<group>"; };
+		13090C2A26DD61F1007269DF /* 8311-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "8311-loading.json"; sourceTree = "<group>"; };
+		13090C2E26DD7455007269DF /* PostCommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentViewController.swift; sourceTree = "<group>"; };
+		13090C3026DD7495007269DF /* PostCommentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentListViewModel.swift; sourceTree = "<group>"; };
+		13090C3226DD780A007269DF /* PostCommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentTableViewCell.swift; sourceTree = "<group>"; };
+		13090C3526DD9401007269DF /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		13090C3826DD9562007269DF /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
+		13090C3B26DD9900007269DF /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
 		13C9464326DCD52100E6B235 /* FolkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FolkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C9464626DCD52100E6B235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13C9464826DCD52100E6B235 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +123,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13090C2726DD61DF007269DF /* LottieAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				13090C2A26DD61F1007269DF /* 8311-loading.json */,
+				13090C2826DD61F1007269DF /* 57182-boy-touch-tablet.json */,
+				13090C2926DD61F1007269DF /* 57183-character-draw-in-the-air.json */,
+			);
+			path = LottieAnimation;
+			sourceTree = "<group>";
+		};
+		13090C3426DD93EF007269DF /* PageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				13090C3726DD9556007269DF /* PageVC */,
+				13090C3526DD9401007269DF /* PageViewController.swift */,
+			);
+			path = PageViewController;
+			sourceTree = "<group>";
+		};
+		13090C3726DD9556007269DF /* PageVC */ = {
+			isa = PBXGroup;
+			children = (
+				13090C3826DD9562007269DF /* PageVC.swift */,
+			);
+			path = PageVC;
+			sourceTree = "<group>";
+		};
+		13090C3A26DD98EE007269DF /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				13090C3B26DD9900007269DF /* LaunchScreenVC.swift */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
 		13C9463A26DCD52000E6B235 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +183,9 @@
 		13C9464526DCD52100E6B235 /* FolkApp */ = {
 			isa = PBXGroup;
 			children = (
+				13090C3A26DD98EE007269DF /* LaunchScreen */,
+				13090C3426DD93EF007269DF /* PageViewController */,
+				13090C2726DD61DF007269DF /* LottieAnimation */,
 				13C9469726DD600000E6B235 /* Extensions */,
 				13C9469226DCF57000E6B235 /* DataService */,
 				13C9468026DCD6E900E6B235 /* Constants */,
@@ -235,6 +291,7 @@
 		13C9468426DCD9E900E6B235 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				13090C3226DD780A007269DF /* PostCommentTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,6 +307,7 @@
 		13C9468626DCD9F200E6B235 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				13090C3026DD7495007269DF /* PostCommentListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -257,6 +315,7 @@
 		13C9468726DCD9F700E6B235 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				13090C2E26DD7455007269DF /* PostCommentViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -425,7 +484,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13090C2B26DD61F1007269DF /* 57182-boy-touch-tablet.json in Resources */,
+				13090C2D26DD61F1007269DF /* 8311-loading.json in Resources */,
 				13C9465326DCD52400E6B235 /* Assets.xcassets in Resources */,
+				13090C2C26DD61F1007269DF /* 57183-character-draw-in-the-air.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,14 +619,20 @@
 				13C9468B26DCDA1A00E6B235 /* CoreDataManager.swift in Sources */,
 				13C9468226DCD6FA00E6B235 /* Constants.swift in Sources */,
 				13C9464B26DCD52100E6B235 /* PostViewController.swift in Sources */,
+				13090C3926DD9562007269DF /* PageVC.swift in Sources */,
+				13090C3C26DD9900007269DF /* LaunchScreenVC.swift in Sources */,
 				13090C2626DD602B007269DF /* UIApplication + Extension.swift in Sources */,
 				13C9469426DCF57E00E6B235 /* DataService.swift in Sources */,
+				13090C3126DD7495007269DF /* PostCommentListViewModel.swift in Sources */,
 				13C9468F26DCF51000E6B235 /* PostComment.swift in Sources */,
 				13C9465126DCD52100E6B235 /* FolkApp.xcdatamodeld in Sources */,
 				13C9464726DCD52100E6B235 /* AppDelegate.swift in Sources */,
 				13C9468D26DCF0F200E6B235 /* Post.swift in Sources */,
 				13C9469126DCF55300E6B235 /* PostCommentViewModel.swift in Sources */,
+				13090C3326DD780A007269DF /* PostCommentTableViewCell.swift in Sources */,
 				13C9464926DCD52100E6B235 /* SceneDelegate.swift in Sources */,
+				13090C2F26DD7455007269DF /* PostCommentViewController.swift in Sources */,
+				13090C3626DD9401007269DF /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

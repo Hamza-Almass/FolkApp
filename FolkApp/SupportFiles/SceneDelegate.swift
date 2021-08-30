@@ -11,7 +11,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -19,7 +18,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
-        window?.rootViewController = UINavigationController(rootViewController: PostViewController())
+       // window?.rootViewController = UINavigationController(rootViewController: PostViewController())
+        
+        let launchScreenVC = LaunchScreenVC(icon: "0")
+        window?.rootViewController = launchScreenVC
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            launchScreenVC.setImageView(imageNumber: 1)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                launchScreenVC.setImageView(imageNumber: 2)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                    launchScreenVC.setImageView(imageNumber: 3)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { [weak self] in
+                        guard let s = self else { return }
+                        s.window?.rootViewController = UINavigationController(rootViewController: PostViewController())
+                    }
+                }
+            }
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

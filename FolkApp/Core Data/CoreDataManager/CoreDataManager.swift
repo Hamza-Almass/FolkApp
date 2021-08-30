@@ -37,9 +37,9 @@ class CoreDataManager<Element: Equatable> {
        
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>.init()
         fetchRequest.entity = NSEntityDescription.entity(forEntityName: self.entityName, in: context)
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
         do {
             return .init(value: try context.fetch(fetchRequest) as! [Element])
-            //self.elements.accept(elements)
         }catch{
             print(error.localizedDescription , "With fetch data from core data")
         }
@@ -54,6 +54,19 @@ class CoreDataManager<Element: Equatable> {
             try context.execute(batchDeleteRequest)
         }catch{
             print(error.localizedDescription , "With deleting elements in core data")
+        }
+    }
+    
+    func fetchElement(fieldName: String , fieldValue: String) -> Element? {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>.init()
+        fetchRequest.entity = NSEntityDescription.entity(forEntityName: self.entityName, in: context)
+        fetchRequest.predicate = NSPredicate(format: "\(fieldName) == %@", fieldValue)
+        do {
+            let elemensts = try context.fetch(fetchRequest) as! [Element]
+            return elemensts.count > 0 ? elemensts.first : nil
+        }catch{
+            print(error.localizedDescription)
+            return nil
         }
     }
     
