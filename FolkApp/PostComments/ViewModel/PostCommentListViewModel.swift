@@ -26,6 +26,10 @@ struct PostCommentListViewModel {
         self.coreDataManager = .init(entity: .postCommentCoreData)
     }
     
+    var myPost: Post {
+        return self.post
+    }
+    
     func fetchComments(url: String,completion: @escaping(_ error: Error?) -> Void){
         
         dataService.fetch(url: url).subscribe(onNext: { (comments) in
@@ -73,7 +77,6 @@ struct PostCommentListViewModel {
             }
         })
     }
-    
     
 }
 
