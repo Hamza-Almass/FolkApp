@@ -36,7 +36,7 @@ class PostCommentViewController: UIViewController , UITableViewDelegate {
         postCommentListVM = .init(dataService: self.dataService, post: post)
         animationView = showLottieAnimation()
         animationView.isHidden = false
-        postCommentListVM.fetchComments(url: "https://jsonplaceholder.typicode.com/comments?postId=\(post.id ?? 0)") { [weak self] (error) in
+        postCommentListVM.fetchComments(url: getPostCommentURL(id: post.id ?? 0)) { [weak self] (error) in
             guard let s = self else { return }
             DispatchQueue.main.async {
                 s.animationView.isHidden = true

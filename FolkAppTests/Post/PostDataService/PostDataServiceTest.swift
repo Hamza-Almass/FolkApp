@@ -9,7 +9,7 @@ import XCTest
 import RxSwift
 
 @testable import FolkApp
-class DataServiceTest: XCTestCase {
+class PostDataServiceTest: XCTestCase {
 
     private let disposeBag = DisposeBag()
     var dataService: MockPostDataService!

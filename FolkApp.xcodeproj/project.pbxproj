@@ -18,8 +18,13 @@
 		13090C3926DD9562007269DF /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13090C3826DD9562007269DF /* PageVC.swift */; };
 		13090C3C26DD9900007269DF /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13090C3B26DD9900007269DF /* LaunchScreenVC.swift */; };
 		13C88F2026DE117800B56303 /* PostListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C88F1F26DE117800B56303 /* PostListViewModelTest.swift */; };
-		13C88F2326DE137400B56303 /* DataServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C88F2226DE137400B56303 /* DataServiceTest.swift */; };
+		13C88F2326DE137400B56303 /* PostDataServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C88F2226DE137400B56303 /* PostDataServiceTest.swift */; };
 		13C88F2626DE266D00B56303 /* PostViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C88F2526DE266D00B56303 /* PostViewModelTest.swift */; };
+		13C88F2F26DE2BDE00B56303 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C88F2E26DE2BDE00B56303 /* MockDataService.swift */; };
+		13C88F3426DE2DA000B56303 /* PostCommentDataServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C88F3326DE2DA000B56303 /* PostCommentDataServiceTest.swift */; };
+		13C88F3626DE2FE500B56303 /* PostCommentListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C88F3526DE2FE500B56303 /* PostCommentListViewModelTest.swift */; };
+		13C88F3926DE31EE00B56303 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C88F3826DE31EE00B56303 /* Global.swift */; };
+		13C88F3D26DE411E00B56303 /* PostCommentViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C88F3C26DE411E00B56303 /* PostCommentViewModelTest.swift */; };
 		13C9464726DCD52100E6B235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9464626DCD52100E6B235 /* AppDelegate.swift */; };
 		13C9464926DCD52100E6B235 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9464826DCD52100E6B235 /* SceneDelegate.swift */; };
 		13C9464B26DCD52100E6B235 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9464A26DCD52100E6B235 /* PostViewController.swift */; };
@@ -67,8 +72,13 @@
 		13090C3826DD9562007269DF /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
 		13090C3B26DD9900007269DF /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
 		13C88F1F26DE117800B56303 /* PostListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModelTest.swift; sourceTree = "<group>"; };
-		13C88F2226DE137400B56303 /* DataServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTest.swift; sourceTree = "<group>"; };
+		13C88F2226DE137400B56303 /* PostDataServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataServiceTest.swift; sourceTree = "<group>"; };
 		13C88F2526DE266D00B56303 /* PostViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModelTest.swift; sourceTree = "<group>"; };
+		13C88F2E26DE2BDE00B56303 /* MockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataService.swift; sourceTree = "<group>"; };
+		13C88F3326DE2DA000B56303 /* PostCommentDataServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentDataServiceTest.swift; sourceTree = "<group>"; };
+		13C88F3526DE2FE500B56303 /* PostCommentListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentListViewModelTest.swift; sourceTree = "<group>"; };
+		13C88F3826DE31EE00B56303 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		13C88F3C26DE411E00B56303 /* PostCommentViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentViewModelTest.swift; sourceTree = "<group>"; };
 		13C9464326DCD52100E6B235 /* FolkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FolkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C9464626DCD52100E6B235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13C9464826DCD52100E6B235 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,18 +175,53 @@
 		13C88F1E26DE111500B56303 /* Post */ = {
 			isa = PBXGroup;
 			children = (
+				13C88F2126DE135E00B56303 /* PostDataService */,
 				13C88F1F26DE117800B56303 /* PostListViewModelTest.swift */,
 				13C88F2526DE266D00B56303 /* PostViewModelTest.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
 		};
-		13C88F2126DE135E00B56303 /* DataService */ = {
+		13C88F2126DE135E00B56303 /* PostDataService */ = {
 			isa = PBXGroup;
 			children = (
-				13C88F2226DE137400B56303 /* DataServiceTest.swift */,
+				13C88F2226DE137400B56303 /* PostDataServiceTest.swift */,
 			);
-			path = DataService;
+			path = PostDataService;
+			sourceTree = "<group>";
+		};
+		13C88F2D26DE2BC800B56303 /* MockDataService */ = {
+			isa = PBXGroup;
+			children = (
+				13C88F2E26DE2BDE00B56303 /* MockDataService.swift */,
+			);
+			path = MockDataService;
+			sourceTree = "<group>";
+		};
+		13C88F3126DE2D3A00B56303 /* PostComment */ = {
+			isa = PBXGroup;
+			children = (
+				13C88F3226DE2D7D00B56303 /* PostCommentDataService */,
+				13C88F3526DE2FE500B56303 /* PostCommentListViewModelTest.swift */,
+				13C88F3C26DE411E00B56303 /* PostCommentViewModelTest.swift */,
+			);
+			path = PostComment;
+			sourceTree = "<group>";
+		};
+		13C88F3226DE2D7D00B56303 /* PostCommentDataService */ = {
+			isa = PBXGroup;
+			children = (
+				13C88F3326DE2DA000B56303 /* PostCommentDataServiceTest.swift */,
+			);
+			path = PostCommentDataService;
+			sourceTree = "<group>";
+		};
+		13C88F3726DE31DC00B56303 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				13C88F3826DE31EE00B56303 /* Global.swift */,
+			);
+			path = Global;
 			sourceTree = "<group>";
 		};
 		13C9463A26DCD52000E6B235 = {
@@ -204,6 +249,7 @@
 		13C9464526DCD52100E6B235 /* FolkApp */ = {
 			isa = PBXGroup;
 			children = (
+				13C88F3726DE31DC00B56303 /* Global */,
 				13090C3A26DD98EE007269DF /* LaunchScreen */,
 				13090C3426DD93EF007269DF /* PageViewController */,
 				13090C2726DD61DF007269DF /* LottieAnimation */,
@@ -223,7 +269,8 @@
 		13C9465F26DCD52500E6B235 /* FolkAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				13C88F2126DE135E00B56303 /* DataService */,
+				13C88F2D26DE2BC800B56303 /* MockDataService */,
+				13C88F3126DE2D3A00B56303 /* PostComment */,
 				13C88F1E26DE111500B56303 /* Post */,
 				13C9466226DCD52500E6B235 /* Info.plist */,
 			);
@@ -642,6 +689,7 @@
 				13C9468B26DCDA1A00E6B235 /* CoreDataManager.swift in Sources */,
 				13C9468226DCD6FA00E6B235 /* Constants.swift in Sources */,
 				13C9464B26DCD52100E6B235 /* PostViewController.swift in Sources */,
+				13C88F3926DE31EE00B56303 /* Global.swift in Sources */,
 				13090C3926DD9562007269DF /* PageVC.swift in Sources */,
 				13090C3C26DD9900007269DF /* LaunchScreenVC.swift in Sources */,
 				13090C2626DD602B007269DF /* UIApplication + Extension.swift in Sources */,
@@ -663,9 +711,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13C88F3D26DE411E00B56303 /* PostCommentViewModelTest.swift in Sources */,
 				13C88F2026DE117800B56303 /* PostListViewModelTest.swift in Sources */,
-				13C88F2326DE137400B56303 /* DataServiceTest.swift in Sources */,
+				13C88F2F26DE2BDE00B56303 /* MockDataService.swift in Sources */,
+				13C88F2326DE137400B56303 /* PostDataServiceTest.swift in Sources */,
 				13C88F2626DE266D00B56303 /* PostViewModelTest.swift in Sources */,
+				13C88F3626DE2FE500B56303 /* PostCommentListViewModelTest.swift in Sources */,
+				13C88F3426DE2DA000B56303 /* PostCommentDataServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
