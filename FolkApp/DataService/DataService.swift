@@ -40,11 +40,13 @@ class DataService<Element: Codable> {
     
 }
 
-class MockPostDataService: DataService<Post> {
+class MockPostDataService: DataService<[Post]> {
     
-    override func fetch(url: String) -> Observable<Post> {
-        return .just(.init(userId: 1, id: 1, title: "This is a mock title", body: "This is a mock body", username: "Folk app"))
+    override func fetch(url: String) -> Observable<[Post]> {
+        guard let _ = URL(string: url) else { return .just([])}
+        return .just([.init(userId: 1, id: 1, title: "This is a mock title", body: "This is a mock body", username: "Folk app")])
     }
+    
 }
 
 //class MockPostCommentDataService: DataService<PostComment> {

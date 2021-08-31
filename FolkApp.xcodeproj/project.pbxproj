@@ -17,12 +17,13 @@
 		13090C3626DD9401007269DF /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13090C3526DD9401007269DF /* PageViewController.swift */; };
 		13090C3926DD9562007269DF /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13090C3826DD9562007269DF /* PageVC.swift */; };
 		13090C3C26DD9900007269DF /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13090C3B26DD9900007269DF /* LaunchScreenVC.swift */; };
+		13C88F2026DE117800B56303 /* PostViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C88F1F26DE117800B56303 /* PostViewModelTest.swift */; };
+		13C88F2326DE137400B56303 /* DataServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C88F2226DE137400B56303 /* DataServiceTest.swift */; };
 		13C9464726DCD52100E6B235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9464626DCD52100E6B235 /* AppDelegate.swift */; };
 		13C9464926DCD52100E6B235 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9464826DCD52100E6B235 /* SceneDelegate.swift */; };
 		13C9464B26DCD52100E6B235 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9464A26DCD52100E6B235 /* PostViewController.swift */; };
 		13C9465126DCD52100E6B235 /* FolkApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 13C9464F26DCD52100E6B235 /* FolkApp.xcdatamodeld */; };
 		13C9465326DCD52400E6B235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13C9465226DCD52400E6B235 /* Assets.xcassets */; };
-		13C9466126DCD52500E6B235 /* FolkAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9466026DCD52500E6B235 /* FolkAppTests.swift */; };
 		13C9466C26DCD52500E6B235 /* FolkAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9466B26DCD52500E6B235 /* FolkAppUITests.swift */; };
 		13C9468226DCD6FA00E6B235 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9468126DCD6FA00E6B235 /* Constants.swift */; };
 		13C9468B26DCDA1A00E6B235 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9468A26DCDA1A00E6B235 /* CoreDataManager.swift */; };
@@ -64,6 +65,8 @@
 		13090C3526DD9401007269DF /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		13090C3826DD9562007269DF /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
 		13090C3B26DD9900007269DF /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
+		13C88F1F26DE117800B56303 /* PostViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModelTest.swift; sourceTree = "<group>"; };
+		13C88F2226DE137400B56303 /* DataServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTest.swift; sourceTree = "<group>"; };
 		13C9464326DCD52100E6B235 /* FolkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FolkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C9464626DCD52100E6B235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13C9464826DCD52100E6B235 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,7 +75,6 @@
 		13C9465226DCD52400E6B235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13C9465726DCD52400E6B235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13C9465C26DCD52500E6B235 /* FolkAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FolkAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		13C9466026DCD52500E6B235 /* FolkAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolkAppTests.swift; sourceTree = "<group>"; };
 		13C9466226DCD52500E6B235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13C9466726DCD52500E6B235 /* FolkAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FolkAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C9466B26DCD52500E6B235 /* FolkAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolkAppUITests.swift; sourceTree = "<group>"; };
@@ -158,6 +160,22 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
+		13C88F1E26DE111500B56303 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				13C88F1F26DE117800B56303 /* PostViewModelTest.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		13C88F2126DE135E00B56303 /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				13C88F2226DE137400B56303 /* DataServiceTest.swift */,
+			);
+			path = DataService;
+			sourceTree = "<group>";
+		};
 		13C9463A26DCD52000E6B235 = {
 			isa = PBXGroup;
 			children = (
@@ -202,7 +220,8 @@
 		13C9465F26DCD52500E6B235 /* FolkAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				13C9466026DCD52500E6B235 /* FolkAppTests.swift */,
+				13C88F2126DE135E00B56303 /* DataService */,
+				13C88F1E26DE111500B56303 /* Post */,
 				13C9466226DCD52500E6B235 /* Info.plist */,
 			);
 			path = FolkAppTests;
@@ -451,6 +470,7 @@
 					};
 					13C9465B26DCD52500E6B235 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 						TestTargetID = 13C9464226DCD52100E6B235;
 					};
 					13C9466626DCD52500E6B235 = {
@@ -640,7 +660,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13C9466126DCD52500E6B235 /* FolkAppTests.swift in Sources */,
+				13C88F2026DE117800B56303 /* PostViewModelTest.swift in Sources */,
+				13C88F2326DE137400B56303 /* DataServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,6 +851,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L4NFNF42EH;
 				INFOPLIST_FILE = FolkAppTests/Info.plist;
@@ -841,6 +863,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.HamzaAlmass.FolkAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FolkApp.app/FolkApp";
@@ -853,6 +876,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L4NFNF42EH;
 				INFOPLIST_FILE = FolkAppTests/Info.plist;

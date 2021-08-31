@@ -85,7 +85,7 @@ class PostViewController: UIViewController {
         animationView = showLottieAnimation()
         animationView.isHidden = false
         postListVM = PostListViewModel(dataService: dataService)
-        postListVM.fetchAllPosts(url: "https://jsonplaceholder.typicode.com/posts") { [weak self] (error)  in
+        postListVM.fetchAllPosts(url: kPOSTSURL) { [weak self] (error)  in
             guard let s = self else { return }
             
             DispatchQueue.main.async {
