@@ -17,8 +17,9 @@
 		13090C3626DD9401007269DF /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13090C3526DD9401007269DF /* PageViewController.swift */; };
 		13090C3926DD9562007269DF /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13090C3826DD9562007269DF /* PageVC.swift */; };
 		13090C3C26DD9900007269DF /* LaunchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13090C3B26DD9900007269DF /* LaunchScreenVC.swift */; };
-		13C88F2026DE117800B56303 /* PostViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C88F1F26DE117800B56303 /* PostViewModelTest.swift */; };
+		13C88F2026DE117800B56303 /* PostListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C88F1F26DE117800B56303 /* PostListViewModelTest.swift */; };
 		13C88F2326DE137400B56303 /* DataServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C88F2226DE137400B56303 /* DataServiceTest.swift */; };
+		13C88F2626DE266D00B56303 /* PostViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C88F2526DE266D00B56303 /* PostViewModelTest.swift */; };
 		13C9464726DCD52100E6B235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9464626DCD52100E6B235 /* AppDelegate.swift */; };
 		13C9464926DCD52100E6B235 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9464826DCD52100E6B235 /* SceneDelegate.swift */; };
 		13C9464B26DCD52100E6B235 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9464A26DCD52100E6B235 /* PostViewController.swift */; };
@@ -65,8 +66,9 @@
 		13090C3526DD9401007269DF /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		13090C3826DD9562007269DF /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
 		13090C3B26DD9900007269DF /* LaunchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenVC.swift; sourceTree = "<group>"; };
-		13C88F1F26DE117800B56303 /* PostViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModelTest.swift; sourceTree = "<group>"; };
+		13C88F1F26DE117800B56303 /* PostListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModelTest.swift; sourceTree = "<group>"; };
 		13C88F2226DE137400B56303 /* DataServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTest.swift; sourceTree = "<group>"; };
+		13C88F2526DE266D00B56303 /* PostViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModelTest.swift; sourceTree = "<group>"; };
 		13C9464326DCD52100E6B235 /* FolkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FolkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C9464626DCD52100E6B235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13C9464826DCD52100E6B235 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,7 +165,8 @@
 		13C88F1E26DE111500B56303 /* Post */ = {
 			isa = PBXGroup;
 			children = (
-				13C88F1F26DE117800B56303 /* PostViewModelTest.swift */,
+				13C88F1F26DE117800B56303 /* PostListViewModelTest.swift */,
+				13C88F2526DE266D00B56303 /* PostViewModelTest.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -660,8 +663,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13C88F2026DE117800B56303 /* PostViewModelTest.swift in Sources */,
+				13C88F2026DE117800B56303 /* PostListViewModelTest.swift in Sources */,
 				13C88F2326DE137400B56303 /* DataServiceTest.swift in Sources */,
+				13C88F2626DE266D00B56303 /* PostViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

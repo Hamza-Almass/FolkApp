@@ -12,46 +12,90 @@ import RxSwift
 class PostViewModelTest: XCTestCase {
 
     private let disposeBag = DisposeBag()
-    var postListVM: PostListViewModel!
-    var dataService: MockPostDataService!
+    private var dataService: MockPostDataService!
+    private var postListViewModel: PostListViewModel!
     
     override func setUp() {
         super.setUp()
         
         dataService = .init()
-        postListVM = PostListViewModel(dataService: dataService)
-       
+        postListViewModel = .init(dataService: dataService)
     }
     
     override func tearDown() {
         super.tearDown()
-        postListVM = nil
+        postListViewModel = nil
         dataService = nil
     }
     
-    func testPostListViewModel_ProvidePostURL_ShouldReturnPostsObject(){
-       
-        let expectation = self.expectation(description: "Provide posts url")
+    func testPostViewModelPostUserName_ShouldGetPostUserName(){
+        var allPosts = [Post]()
+        let expectation = expectation(description: "Must we received Post username")
         dataService.fetch(url: kPOSTSURL).subscribe(onNext: { (posts) in
-            self.postListVM.posts.accept(posts)
+            allPosts = posts
             expectation.fulfill()
         }).disposed(by: disposeBag)
-        
         wait(for: [expectation], timeout: 0)
-        XCTAssertTrue(self.postListVM.posts.value.count > 0  , "Must get array of posts")
-       
+        let postViewModel = PostViewModel(post: allPosts[0])
+        postViewModel.postUserName.subscribe(onNext: { (userName) in
+            XCTAssertEqual(userName, "Folk app")
+        }).disposed(by: disposeBag)
     }
     
-    func testPostViewModel_ShouldReturnPost(){
-       
-        let expectation = self.expectation(description: "Without provide posts url")
-        dataService.fetch(url: "").subscribe(onNext: { (posts) in
-            self.postListVM.posts.accept(posts)
+    func testPostViewModelPostTitle_ShouldGetPostTitle(){
+        var allPosts = [Post]()
+        let expectation = expectation(description: "Must we received Post title")
+        dataService.fetch(url: kPOSTSURL).subscribe(onNext: { (posts) in
+            allPosts = posts
             expectation.fulfill()
         }).disposed(by: disposeBag)
-        
         wait(for: [expectation], timeout: 0)
-        XCTAssertTrue(self.postListVM.posts.value.count == 0  , "Must get empty array of posts")
+        let postViewModel = PostViewModel(post: allPosts[0])
+        postViewModel.postTitle.subscribe(onNext: { (title) in
+            XCTAssertEqual(title, "This is a mock title")
+        }).disposed(by: disposeBag)
+    }
+    
+    func testPostViewModelPostBody_ShouldGetPostBody(){
+        var allPosts = [Post]()
+        let expectation = expectation(description: "Must we received Post body")
+        dataService.fetch(url: kPOSTSURL).subscribe(onNext: { (posts) in
+            allPosts = posts
+            expectation.fulfill()
+        }).disposed(by: disposeBag)
+        wait(for: [expectation], timeout: 0)
+        let postViewModel = PostViewModel(post: allPosts[0])
+        postViewModel.postBody.subscribe(onNext: { (title) in
+            XCTAssertEqual(title, "This is a mock body")
+        }).disposed(by: disposeBag)
+    }
+    
+    func testPostViewModelPostId_ShouldGetPostId(){
+        var allPosts = [Post]()
+        let expectation = expectation(description: "Must we received Post Id")
+        dataService.fetch(url: kPOSTSURL).subscribe(onNext: { (posts) in
+            allPosts = posts
+            expectation.fulfill()
+        }).disposed(by: disposeBag)
+        wait(for: [expectation], timeout: 0)
+        let postViewModel = PostViewModel(post: allPosts[0])
+        postViewModel.postId.subscribe(onNext: { (id) in
+            XCTAssertEqual("\(id)", "1")
+        }).disposed(by: disposeBag)
+    }
+    
+    func testPostViewModelPostUserId_ShouldGetPostUserId(){
+        var allPosts = [Post]()
+        let expectation = expectation(description: "Must we received Post userId")
+        dataService.fetch(url: kPOSTSURL).subscribe(onNext: { (posts) in
+            allPosts = posts
+            expectation.fulfill()
+        }).disposed(by: disposeBag)
+        wait(for: [expectation], timeout: 0)
+        let postViewModel = PostViewModel(post: allPosts[0])
+        postViewModel.postUserId.subscribe(onNext: { (id) in
+            XCTAssertEqual("\(id)", "1")
+        }).disposed(by: disposeBag)
     }
 
 }
