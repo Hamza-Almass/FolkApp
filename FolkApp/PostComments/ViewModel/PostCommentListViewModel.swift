@@ -9,27 +9,38 @@ import UIKit
 import RxCocoa
 import RxSwift
 
+//MARK:- PostCommentListViewModel
+/// PostCommnetListViewModel
 struct PostCommentListViewModel {
     
+    //MARK:- Property
     let disposeBag = DisposeBag()
-    
     private var coreDataManager: CoreDataManager<PostCommentCoreData>!
-    
     private let post: Post
     private let dataService: DataService<[PostComment]>
-    
     var comments: BehaviorRelay<[PostComment]> = .init(value: [])
     
+    //MARK:- init
+    
+    /// init
+    /// - Parameters:
+    ///   - dataService: DataService to fetch the post comments
+    ///   - post: Post
     init(dataService: DataService<[PostComment]> , post: Post){
         self.dataService = dataService
         self.post = post
         self.coreDataManager = .init(entity: .postCommentCoreData)
     }
     
+    /// actual post
     var myPost: Post {
         return self.post
     }
     
+    /// Fetch comments from json placeholder
+    /// - Parameters:
+    ///   - url: string
+    ///   - completion: error if exists
     func fetchComments(url: String,completion: @escaping(_ error: Error?) -> Void){
         
         dataService.fetch(url: url).subscribe(onNext: { (comments) in
@@ -50,7 +61,9 @@ struct PostCommentListViewModel {
         }).disposed(by: disposeBag)
     }
     
-   
+    //MARK:- Save comments in core data
+    /// Save comments in core data
+    /// - Parameter comments: [PostComment]]
     private func saveCommentsInCoreData(comments: [PostComment]){
         // Get the post to set the comments to it
         let coreDataManagerForPost = CoreDataManager<PostCoreData>.init(entity: .postCoreData)
@@ -65,7 +78,8 @@ struct PostCommentListViewModel {
             self.coreDataManager.saveElements()
         })
     }
-    
+    //MARK:- Fetch all comments offline
+    /// Fetch all comments from core data if connected offline
     private func fetchAllCommentsOffline(){
         var arrayOfComments = [PostComment]()
         let postCommentsCoreData = coreDataManager.fetchElements().value
@@ -80,30 +94,39 @@ struct PostCommentListViewModel {
     
 }
 
+//MARK:- PostCommentViewModel
+/// PostCommentViewModel
 struct PostCommentViewModel {
     
     private let postComment: PostComment
     
+    /// init
+    /// - Parameter postComment: PostComment
     init(postComment: PostComment){
         self.postComment = postComment
     }
     
+    /// Post comment id as observable
     var postId: Observable<Int> {
         return .just(self.postComment.postId ?? 0)
     }
     
+    /// post comment id as observable
     var id: Observable<Int> {
         return .just(self.postComment.id ?? 0)
     }
     
+    /// Post comment name as observable
     var commentName: Observable<String> {
         return .just(self.postComment.name ?? "")
     }
     
+    /// Post comment email as observable
     var commentEmail: Observable<String> {
         return .just(self.postComment.email ?? "")
     }
     
+    /// Post comment body as observable
     var commentBody: Observable<String> {
         return .just(self.postComment.body ?? "")
     }

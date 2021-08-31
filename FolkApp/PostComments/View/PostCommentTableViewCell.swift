@@ -13,8 +13,8 @@ import PaddingLabel
 
 class PostCommentTableViewCell: UITableViewCell {
     
+    //MARK:- Property
     private let disposeBag = DisposeBag()
-    
     private let iconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 20
@@ -48,13 +48,13 @@ class PostCommentTableViewCell: UITableViewCell {
         label.clipsToBounds = true
         return label
     }()
-    
+    //MARK:- init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.backgroundColor = UIColor(named: kBGCELLCOLOR)
         setupUI()
     }
-    
+    //MARK:- SetupUI
     private func setupUI(){
         contentView.addSubview(iconImageView)
         iconImageView.easy.layout(Top(10),Leading(16),Width(40),Height(40))
@@ -63,7 +63,9 @@ class PostCommentTableViewCell: UITableViewCell {
         contentView.addSubview(bodyLabel)
         bodyLabel.easy.layout(Top(10).to(iconImageView,.bottom),Leading(16),Trailing(16),Bottom(10))
     }
-    
+    //MARK:- Configure cell
+    /// Configure post comment cell
+    /// - Parameter postCommentVM: PostCommentViewModel
     func configureCell(postCommentVM: PostCommentViewModel){
         postCommentVM.commentEmail.bind(to: emailLabel.rx.text).disposed(by: disposeBag)
         postCommentVM.commentBody.bind(to: bodyLabel.rx.text).disposed(by: disposeBag)

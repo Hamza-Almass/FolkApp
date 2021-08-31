@@ -14,6 +14,7 @@ import Lottie
 
 class PostViewController: UIViewController {
 
+    //MARK:- Property
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.separatorStyle = .none
@@ -40,13 +41,17 @@ class PostViewController: UIViewController {
         return imageView
     }()
     
+   
     private let dataService: DataService<[Post]> = .init()
     private var postListVM: PostListViewModel!
     private var animationView: AnimationView!
     
+    //MARK:- viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.accessibilityIdentifier = "PostView"
+        tableView.accessibilityIdentifier = "postTableView"
         view.backgroundColor = UIColor(named: kBGCOLOR)
         
         onBordingView()
@@ -54,8 +59,9 @@ class PostViewController: UIViewController {
         setupNavBarIcons()
     }
     
+    //MARK:- SetupNavBar
+    /// SetupNavBarIcons
     private func setupNavBarIcons(){
-        
         let iconNavbarHStackView = UIStackView(arrangedSubviews: [navbarLineImageView , navbarTextImageView])
         iconNavbarHStackView.axis = .horizontal
         iconNavbarHStackView.alignment = .fill
@@ -66,9 +72,9 @@ class PostViewController: UIViewController {
         iconNavbarHStackView.tag = 1000
         navigationController?.navigationBar.addSubview(iconNavbarHStackView)
         iconNavbarHStackView.easy.layout(CenterX(0),CenterY(0),Width(self.view.frame.width * 0.3))
-        
     }
-    
+    //MARK:- Create on bording view and show it
+    /// Create on bording View and show it
     private func onBordingView(){
         let pageViewController = PageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         pageViewController.modalPresentationStyle = .fullScreen
@@ -81,6 +87,7 @@ class PostViewController: UIViewController {
         }
     }
     
+    /// Fetch posts form json placeholder
     private func fetchPosts(){
         animationView = showLottieAnimation()
         animationView.isHidden = false
@@ -100,12 +107,15 @@ class PostViewController: UIViewController {
             }
         }
     }
-    
+    //MARK:- SetupUI
+    /// SetuUI
     private func setupUI(){
         view.addSubview(tableView)
         tableView.easy.layout(Edges.init(16))
     }
     
+    //MARK:- Bind UI
+    /// Bind UI
     private func bindUI(){
         if postListVM != nil {
             postListVM.posts.bind(to: tableView.rx.items(cellIdentifier: kPOSTTABLEVIEWCELLID, cellType: PostTableViewCell.self)) { (index , post , cell) in

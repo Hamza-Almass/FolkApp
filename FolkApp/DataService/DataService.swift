@@ -9,10 +9,14 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+/// Data service to fetch network data
 class DataService<Element: Codable> {
     
     private let disposeBag = DisposeBag()
     
+    /// Fetch network data
+    /// - Parameter url: String
+    /// - Returns: Observable<Element>
     func fetch(url: String) -> Observable<Element> {
         return Observable.create { observer -> Disposable in
             Observable.just(url).map({ (str) -> URL in

@@ -12,6 +12,7 @@ import Lottie
 
 class PostCommentViewController: UIViewController , UITableViewDelegate {
     
+    //MARK:- Property
     private let tableView: UITableView = {
         let tableView = UITableView(frame: .init(), style: .grouped)
         tableView.rowHeight = UITableView.automaticDimension
@@ -30,6 +31,8 @@ class PostCommentViewController: UIViewController , UITableViewDelegate {
     private let dataService = DataService<[PostComment]>.init()
     private var animationView: AnimationView!
     
+    /// init
+    /// - Parameter post: Post
     init(post: Post){
         self.post = post
         super.init(nibName: nil, bundle: nil)
@@ -50,7 +53,7 @@ class PostCommentViewController: UIViewController , UITableViewDelegate {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+    //MARK:- viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -58,12 +61,12 @@ class PostCommentViewController: UIViewController , UITableViewDelegate {
         setupUI()
         bindUI()
     }
-    
+    //MARK:- SetupUI
     private func setupUI(){
         view.addSubview(tableView)
         tableView.easy.layout(Edges(0))
     }
-    
+    //MARK:- BindUI
     private func bindUI(){
         if postCommentListVM != nil {
             tableView.rx.setDelegate(self).disposed(by: postCommentListVM.disposeBag)
@@ -74,7 +77,7 @@ class PostCommentViewController: UIViewController , UITableViewDelegate {
             }.disposed(by: postCommentListVM.disposeBag)
         }
     }
-    
+    //MARK:- Table view header
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if postCommentListVM != nil {
             return createHeaderView(userName: postCommentListVM.myPost.username ?? "", title: postCommentListVM.myPost.title ?? "", body: postCommentListVM.myPost.body ?? "")
@@ -84,8 +87,16 @@ class PostCommentViewController: UIViewController , UITableViewDelegate {
 
 }
 
+//MARK:- Extension
 extension PostCommentViewController {
     
+    //MARK:- Create header table view
+    /// Create header table view
+    /// - Parameters:
+    ///   - userName: string
+    ///   - title: string
+    ///   - body: string
+    /// - Returns: UIView
     fileprivate func createHeaderView(userName: String , title: String , body: String) -> UIView {
        
         let v = UIView()

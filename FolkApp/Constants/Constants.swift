@@ -8,7 +8,7 @@
 import Foundation
 
 
-// Colors
+//MARK:- Colors
 let kBGCOLOR = "BGCOLOR"
 let kTEXTCOLOR = "TEXTCOLOR"
 let kTITLECOLOR = "TITLECOLOR"
@@ -16,9 +16,9 @@ let kDETAILSTEXTCOLOR = "DETAILSTEXTCOLOR"
 let kBGCELLCOLOR = "BGCELLCOLOR"
 
 
-// Table View cells
+//MARK:- Table View cells
 let kPOSTTABLEVIEWCELLID = "kPOSTTABLEVIEWCELLID"
 let kPOSTCOMMENTTABLEVIEWCELLID = "kPOSTCOMMENTTABLEVIEWCELLID"
 
-// URLs
+//MARK:- URLs
 let kPOSTSURL = "https://jsonplaceholder.typicode.com/posts"

@@ -10,6 +10,7 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
     
+    //MARK:- Property
     private let iconImageView:UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "lines")?.withRenderingMode(.alwaysTemplate)
@@ -44,7 +45,7 @@ class PostTableViewCell: UITableViewCell {
         return label
     }()
     
-    
+    //MARK:- init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         backgroundColor = UIColor(named: kBGCOLOR)
@@ -53,18 +54,20 @@ class PostTableViewCell: UITableViewCell {
         contentView.clipsToBounds = true
         setupUI()
     }
-    
+    //MARK:- Layout subview to change content view insets
     override func layoutSubviews() {
         super.layoutSubviews()
         contentView.frame = contentView.frame.inset(by: .init(top: 5, left: 5, bottom: 5, right: 5))
     }
     
+    /// Configure cell by passing PostViewModel
+    /// - Parameter postVM: PostViewModel
     func configureCell(postVM: PostViewModel){
         postVM.postUserName.bind(to: userNameLabel.rx.text).disposed(by: postVM.disposeBag)
         postVM.postTitle.bind(to: titleLabel.rx.text).disposed(by: postVM.disposeBag)
         postVM.postBody.bind(to: bodyLabel.rx.text).disposed(by: postVM.disposeBag)
     }
-    
+    //MARK:- SetupUI
     private func setupUI(){
         contentView.addSubview(iconImageView)
         iconImageView.easy.layout(Leading(16) , Width(40) , Height(40) ,Top(16))

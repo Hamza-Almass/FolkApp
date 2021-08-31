@@ -25,12 +25,13 @@
 		13C88F3626DE2FE500B56303 /* PostCommentListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C88F3526DE2FE500B56303 /* PostCommentListViewModelTest.swift */; };
 		13C88F3926DE31EE00B56303 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C88F3826DE31EE00B56303 /* Global.swift */; };
 		13C88F3D26DE411E00B56303 /* PostCommentViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C88F3C26DE411E00B56303 /* PostCommentViewModelTest.swift */; };
+		13C88F3F26DE45E200B56303 /* LaunchScreenViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C88F3E26DE45E200B56303 /* LaunchScreenViewTest.swift */; };
+		13C88F4326DE481A00B56303 /* OnBordingViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C88F4226DE481A00B56303 /* OnBordingViewTest.swift */; };
 		13C9464726DCD52100E6B235 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9464626DCD52100E6B235 /* AppDelegate.swift */; };
 		13C9464926DCD52100E6B235 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9464826DCD52100E6B235 /* SceneDelegate.swift */; };
 		13C9464B26DCD52100E6B235 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9464A26DCD52100E6B235 /* PostViewController.swift */; };
 		13C9465126DCD52100E6B235 /* FolkApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 13C9464F26DCD52100E6B235 /* FolkApp.xcdatamodeld */; };
 		13C9465326DCD52400E6B235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13C9465226DCD52400E6B235 /* Assets.xcassets */; };
-		13C9466C26DCD52500E6B235 /* FolkAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9466B26DCD52500E6B235 /* FolkAppUITests.swift */; };
 		13C9468226DCD6FA00E6B235 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9468126DCD6FA00E6B235 /* Constants.swift */; };
 		13C9468B26DCDA1A00E6B235 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9468A26DCDA1A00E6B235 /* CoreDataManager.swift */; };
 		13C9468D26DCF0F200E6B235 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C9468C26DCF0F200E6B235 /* Post.swift */; };
@@ -79,6 +80,8 @@
 		13C88F3526DE2FE500B56303 /* PostCommentListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentListViewModelTest.swift; sourceTree = "<group>"; };
 		13C88F3826DE31EE00B56303 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		13C88F3C26DE411E00B56303 /* PostCommentViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentViewModelTest.swift; sourceTree = "<group>"; };
+		13C88F3E26DE45E200B56303 /* LaunchScreenViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewTest.swift; sourceTree = "<group>"; };
+		13C88F4226DE481A00B56303 /* OnBordingViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBordingViewTest.swift; sourceTree = "<group>"; };
 		13C9464326DCD52100E6B235 /* FolkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FolkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C9464626DCD52100E6B235 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13C9464826DCD52100E6B235 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +92,6 @@
 		13C9465C26DCD52500E6B235 /* FolkAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FolkAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C9466226DCD52500E6B235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13C9466726DCD52500E6B235 /* FolkAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FolkAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		13C9466B26DCD52500E6B235 /* FolkAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolkAppUITests.swift; sourceTree = "<group>"; };
 		13C9466D26DCD52500E6B235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13C9468126DCD6FA00E6B235 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		13C9468A26DCDA1A00E6B235 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -147,13 +149,13 @@
 			path = LottieAnimation;
 			sourceTree = "<group>";
 		};
-		13090C3426DD93EF007269DF /* PageViewController */ = {
+		13090C3426DD93EF007269DF /* OnBording */ = {
 			isa = PBXGroup;
 			children = (
 				13090C3726DD9556007269DF /* PageVC */,
 				13090C3526DD9401007269DF /* PageViewController.swift */,
 			);
-			path = PageViewController;
+			path = OnBording;
 			sourceTree = "<group>";
 		};
 		13090C3726DD9556007269DF /* PageVC */ = {
@@ -216,12 +218,28 @@
 			path = PostCommentDataService;
 			sourceTree = "<group>";
 		};
-		13C88F3726DE31DC00B56303 /* Global */ = {
+		13C88F3726DE31DC00B56303 /* Global Methods */ = {
 			isa = PBXGroup;
 			children = (
 				13C88F3826DE31EE00B56303 /* Global.swift */,
 			);
-			path = Global;
+			path = "Global Methods";
+			sourceTree = "<group>";
+		};
+		13C88F4026DE47F300B56303 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				13C88F3E26DE45E200B56303 /* LaunchScreenViewTest.swift */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		13C88F4126DE480000B56303 /* OnBording */ = {
+			isa = PBXGroup;
+			children = (
+				13C88F4226DE481A00B56303 /* OnBordingViewTest.swift */,
+			);
+			path = OnBording;
 			sourceTree = "<group>";
 		};
 		13C9463A26DCD52000E6B235 = {
@@ -249,9 +267,9 @@
 		13C9464526DCD52100E6B235 /* FolkApp */ = {
 			isa = PBXGroup;
 			children = (
-				13C88F3726DE31DC00B56303 /* Global */,
+				13C88F3726DE31DC00B56303 /* Global Methods */,
 				13090C3A26DD98EE007269DF /* LaunchScreen */,
-				13090C3426DD93EF007269DF /* PageViewController */,
+				13090C3426DD93EF007269DF /* OnBording */,
 				13090C2726DD61DF007269DF /* LottieAnimation */,
 				13C9469726DD600000E6B235 /* Extensions */,
 				13C9469226DCF57000E6B235 /* DataService */,
@@ -280,7 +298,8 @@
 		13C9466A26DCD52500E6B235 /* FolkAppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				13C9466B26DCD52500E6B235 /* FolkAppUITests.swift */,
+				13C88F4126DE480000B56303 /* OnBording */,
+				13C88F4026DE47F300B56303 /* LaunchScreen */,
 				13C9466D26DCD52500E6B235 /* Info.plist */,
 			);
 			path = FolkAppUITests;
@@ -525,6 +544,7 @@
 					};
 					13C9466626DCD52500E6B235 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 						TestTargetID = 13C9464226DCD52100E6B235;
 					};
 				};
@@ -725,7 +745,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13C9466C26DCD52500E6B235 /* FolkAppUITests.swift in Sources */,
+				13C88F3F26DE45E200B56303 /* LaunchScreenViewTest.swift in Sources */,
+				13C88F4326DE481A00B56303 /* OnBordingViewTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -955,6 +976,7 @@
 			baseConfigurationReference = 790902897B5CF104BD0074FC /* Pods-FolkApp-FolkAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L4NFNF42EH;
 				INFOPLIST_FILE = FolkAppUITests/Info.plist;
@@ -965,6 +987,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.HamzaAlmass.FolkAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FolkApp;
@@ -976,6 +999,7 @@
 			baseConfigurationReference = D388BA107193745480142160 /* Pods-FolkApp-FolkAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L4NFNF42EH;
 				INFOPLIST_FILE = FolkAppUITests/Info.plist;

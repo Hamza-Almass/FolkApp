@@ -54,12 +54,13 @@ class PageVC: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+    //MARK:- viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: kBGCOLOR)
+        view.accessibilityIdentifier = "onBordingView"
     }
-    
+    //MARK:- viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
        
@@ -69,7 +70,7 @@ class PageVC: UIViewController {
             }
         }
     }
-    
+    //MARK:- SetupUI
     fileprivate func setupUI(){
         
         view.addSubview(iconImageView)

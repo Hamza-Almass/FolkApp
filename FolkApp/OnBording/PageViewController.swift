@@ -11,6 +11,7 @@ import Onboard
 
 class PageViewController: UIPageViewController , UIPageViewControllerDelegate , UIPageViewControllerDataSource {
     
+    //MARK:- Property
     let pages: [UIViewController] = [PageVC(icon: "57183-character-draw-in-the-air", title: "Share your news with World", body: "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the") , PageVC(icon: "57182-boy-touch-tablet", title: "Share your news wih world!", body: "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the")]
     
     var completion: (() -> Void)?
@@ -36,11 +37,12 @@ class PageViewController: UIPageViewController , UIPageViewControllerDelegate , 
     var initialPage: Int = 0
     let pageControl = UIPageControl()
     
+    //MARK:- viewDidload
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor(named: kBGCOLOR)
         
+        view.backgroundColor = UIColor(named: kBGCOLOR)
         view.accessibilityIdentifier = "onboardingView"
         
         self.delegate = self

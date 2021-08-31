@@ -10,6 +10,7 @@ import EasyPeasy
 
 class LaunchScreenVC: UIViewController {
     
+    // Property
     private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .clear
@@ -17,14 +18,16 @@ class LaunchScreenVC: UIViewController {
         imageView.layer.cornerRadius = 0
         return imageView
     }()
-   
+    
+    /// init
+    /// - Parameter icon: String
     init(icon: String){
         super.init(nibName: nil, bundle: nil)
         imageView.image = UIImage(named: icon)
         setupImageView()
         view.accessibilityIdentifier = "launchScreen"
     }
-    
+    //MARK:- set image view
     func setImageView(imageNumber: Int){
         
         imageView.image = UIImage(named: "\(imageNumber)")
@@ -39,11 +42,12 @@ class LaunchScreenVC: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK:- viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
     }
-    
+    //MARK:- SetupImageView
     fileprivate func setupImageView(){
         view.addSubview(imageView)
         imageView.easy.layout(Edges(0))

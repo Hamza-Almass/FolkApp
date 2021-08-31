@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// User Model which belongs to specific post
 class User: Codable {
     
     let id: Int?
@@ -15,6 +16,7 @@ class User: Codable {
     
 }
 
+/// Post model codable to fetch posts from json
 class Post: Codable {
     
     var userId: Int?
@@ -23,6 +25,13 @@ class Post: Codable {
     var body: String?
     var username: String?
     
+    /// init
+    /// - Parameters:
+    ///   - userId: Int
+    ///   - id: Int
+    ///   - title: String
+    ///   - body: String
+    ///   - username: String
     init(userId: Int? , id: Int? , title: String? , body: String? , username: String? = nil){
         self.username = username
         self.id = id
@@ -31,6 +40,10 @@ class Post: Codable {
         self.userId = userId
     }
     
+    /// Fetch post user name
+    /// - Parameters:
+    ///   - url: URL for the specific fetch user
+    ///   - completion: get back error if exists
     func fetchPostUserName(url: String,completion: @escaping(_ error: String?) -> Void){
         guard let url = URL(string: url) else { return }
         URLSession.shared.dataTask(with: url) { (data , res , error) in

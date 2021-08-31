@@ -10,29 +10,35 @@ import CoreData
 import RxSwift
 import RxCocoa
 
+/// Core data entity
 enum CoreDataEntity: String {
     case postCoreData = "PostCoreData"
     case postCommentCoreData = "PostCommentCoreData"
 }
 
+/// Core data manager generics
 class CoreDataManager<Element: Equatable> {
-    
+    //MARK:- Property
     private var persistentContainer: NSPersistentContainer!
     private let entityName: String
     
-    //var elements: BehaviorRelay<[Element]> = .init(value: [])
-    
+    //MARK:- init
+    /// init to create core data amanager
+    /// - Parameter entity: String
     init(entity: CoreDataEntity){
         self.entityName = entity.rawValue
         persistentContainer = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
     }
     
+    /// Core data context
     var context: NSManagedObjectContext {
         get {
             return persistentContainer.viewContext
         }
     }
     
+    /// Fetch elements from core data
+    /// - Returns: [Element]]
     func fetchElements() -> BehaviorRelay<[Element]> {
        
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>.init()
@@ -45,7 +51,8 @@ class CoreDataManager<Element: Equatable> {
         }
         return .init(value: [])
     }
-    
+    //MARK:- Delete all objects from core data
+    /// Delete all objects from core data
     func deleteAllObjectsInCoreData(){
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>.init()
         fetchRequest.entity = NSEntityDescription.entity(forEntityName: self.entityName, in: context)
@@ -57,6 +64,12 @@ class CoreDataManager<Element: Equatable> {
         }
     }
     
+    //MARK:- Fetch element
+    /// Fetch elemenet
+    /// - Parameters:
+    ///   - fieldName: String
+    ///   - fieldValue: String
+    /// - Returns: element as optional
     func fetchElement(fieldName: String , fieldValue: String) -> Element? {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>.init()
         fetchRequest.entity = NSEntityDescription.entity(forEntityName: self.entityName, in: context)
@@ -69,7 +82,8 @@ class CoreDataManager<Element: Equatable> {
             return nil
         }
     }
-    
+    //MARK:- Save object
+    /// Save object to core data
     func saveElements(){
         do {
             try context.save()

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// PostComment model codable to received objects
 class PostComment: Codable {
     
     var post: Post?
@@ -16,6 +17,14 @@ class PostComment: Codable {
     var email: String?
     var body: String?
     
+    /// init to create object from post comment
+    /// - Parameters:
+    ///   - post: Post
+    ///   - postId: Int
+    ///   - id: Int
+    ///   - name: String
+    ///   - email: String
+    ///   - body: String
     init(post: Post? = nil , postId: Int? , id: Int?,name: String? , email: String?,body: String?){
         self.post = post
         self.postId = postId

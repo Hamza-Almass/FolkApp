@@ -11,17 +11,20 @@ import RxCocoa
 
 struct PostListViewModel {
     
+    //MARK:- Property
     let disposeBag = DisposeBag()
     let coreDataManager = CoreDataManager<PostCoreData>(entity: .postCoreData)
-    
     private let dataService: DataService<[Post]>
     var posts: BehaviorRelay<[Post]> = .init(value: [])
     
+    //MARK:- init
+    /// init
+    /// - Parameter dataService: DataService to provide data to this view model
     init(dataService: DataService<[Post]>){
         self.dataService = dataService
     }
     
-    /// Fetch all posts
+    ///MARK:- Fetch all posts
     /// - Parameter url: URL As String
     func fetchAllPosts(url: String,completion: @escaping ((_ error: Error?) -> Void)) {
         
@@ -67,6 +70,8 @@ struct PostListViewModel {
         }).disposed(by: disposeBag)
     }
     
+    //MARK:- Fetch object from core data if offline
+    /// Fetch object from core data if offline
     func fetchObjectsFromCoreData(){
         var arrayOfPost = [Post]()
         let allPostCoreData = coreDataManager.fetchElements().value
@@ -79,33 +84,40 @@ struct PostListViewModel {
     }
     
 }
-
+//MARK:- Post view model
+/// Post View Model
 struct PostViewModel {
     
     let disposeBag = DisposeBag()
     
     private let post: Post
     
+    /// init
+    /// - Parameter post: Post
     init(post: Post){
         self.post = post
     }
-    
+    /// PostId as Observable
     var postId: Observable<Int> {
         return .just(self.post.id ?? 0)
     }
     
+    /// Post user id as observable
     var postUserId: Observable<Int> {
         return .just(self.post.userId ?? 0)
     }
     
+    /// Post title as obseravble
     var postTitle: Observable<String> {
         return .just(self.post.title ?? "")
     }
     
+    /// Post body as obseravble
     var postBody: Observable<String> {
         return .just(self.post.body ?? "")
     }
     
+    /// Post iser name as observable
     var postUserName: Observable<String> {
         return .just(self.post.username ?? "")
     }
