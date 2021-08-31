@@ -44,6 +44,8 @@ class PageViewController: UIPageViewController , UIPageViewControllerDelegate , 
         
         view.backgroundColor = UIColor(named: kBGCOLOR)
         view.accessibilityIdentifier = "onboardingView"
+        nextButton.accessibilityIdentifier = "next"
+        prevButton.accessibilityIdentifier = "prev"
         
         self.delegate = self
         self.dataSource = self
@@ -56,8 +58,7 @@ class PageViewController: UIPageViewController , UIPageViewControllerDelegate , 
         nextButton.addTarget(self, action: #selector(handleNext), for: .touchUpInside)
         prevButton.addTarget(self, action: #selector(handlePrev), for: .touchUpInside)
         
-        nextButton.accessibilityIdentifier = "next"
-        prevButton.accessibilityIdentifier = "prev"
+
        
     }
     

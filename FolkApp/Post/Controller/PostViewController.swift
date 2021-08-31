@@ -57,6 +57,7 @@ class PostViewController: UIViewController {
         onBordingView()
         setupUI()
         setupNavBarIcons()
+    
     }
     
     //MARK:- SetupNavBar
@@ -82,7 +83,12 @@ class PostViewController: UIViewController {
         
         pageViewController.completion = { [weak self] in
             guard let s = self else { return }
-            s.fetchPosts()
+            if ProcessInfo.processInfo.arguments.contains("-fakeData") {
+                s.postListVM = .init(dataService: s.dataService)
+                s.postListVM.posts.accept([.init(userId: 1, id: 1, title: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem", body: "Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident,", username: "Fake user name 1"),.init(userId: 2, id: 2, title: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years", body: "Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero", username: "Fake user name 2")])
+            }else{
+                s.fetchPosts()
+            }
             s.bindUI()
         }
     }

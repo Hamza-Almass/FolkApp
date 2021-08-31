@@ -14,9 +14,12 @@ class OnBordingViewTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
+        
+        continueAfterFailure = false
         app = XCUIApplication()
-        app.launchEnvironment = ["id":"1","userId": "1"]
+        app.launchArguments = ["-fakeData"]
         app.launch()
+        sleep(1)
     }
     
     override func tearDown() {
@@ -42,16 +45,21 @@ class OnBordingViewTest: XCTestCase {
     
     func testOpenPostView_ShouldDisplayPostsAndScrolling(){
         
+        let onBordingView = app.otherElements["onBordingView"]
         let nextButton = app.buttons["next"]
+        onBordingView.swipeLeft()
         nextButton.tap()
-        nextButton.tap()
-        _ = XCTWaiter.wait(for: [expectation(description: "Wait to show the page view on bording")], timeout: 4)
+       
         let tableView = app.tables["postTableView"]
         tableView.swipeUp()
         tableView.swipeDown()
         tableView.cells.allElementsBoundByIndex[0].tap()
-      
         
+        let commentTableView = app.tables["commentTableView"]
+        commentTableView.swipeUp()
+        commentTableView.swipeDown()
+        app.navigationBars["FolkApp.PostCommentView"].buttons["Back"].tap()
+      
     }
 
 }
