@@ -42,24 +42,5 @@ class OnBordingViewTest: XCTestCase {
         nextButton.tap()
         
     }
-    
-    func testOpenPostView_ShouldDisplayPostsAndScrolling(){
-        
-        let onBordingView = app.otherElements["onBordingView"]
-        let nextButton = app.buttons["next"]
-        onBordingView.swipeLeft()
-        nextButton.tap()
-       
-        let tableView = app.tables["postTableView"]
-        tableView.swipeUp()
-        tableView.swipeDown()
-        tableView.cells.allElementsBoundByIndex[0].tap()
-        
-        let commentTableView = app.tables["commentTableView"]
-        commentTableView.swipeUp()
-        commentTableView.swipeDown()
-        app.navigationBars["FolkApp.PostCommentView"].buttons["Back"].tap()
-      
-    }
 
 }

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000817">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: produce" time="13.855222">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: cert" time="8.198444">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: sigh" time="12.626116">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4: gym" time="238.986149">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="5: pilot" time="90.555194">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

@@ -58,7 +58,6 @@ class PostCommentViewController: UIViewController , UITableViewDelegate {
             }
         }
 
-        
     }
     
     required init?(coder: NSCoder) {
