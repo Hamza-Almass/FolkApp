@@ -44,7 +44,8 @@ struct PostCommentListViewModel {
     func fetchComments(url: String,completion: @escaping(_ error: Error?) -> Void){
         
         dataService.fetch(url: url).subscribe(onNext: { (comments) in
-            self.coreDataManager.deleteAllObjectsInCoreData()
+           // self.coreDataManager.deleteAllObjectsInCoreData()
+            self.coreDataManager.deleteAllCommentsObjectsInCoreDataDepenedOn(PostId: self.post.id ?? 0)
             comments.forEach({
                 $0.post = self.post
             })
@@ -68,21 +69,31 @@ struct PostCommentListViewModel {
         // Get the post to set the comments to it
         let coreDataManagerForPost = CoreDataManager<PostCoreData>.init(entity: .postCoreData)
         guard let postCoreData = coreDataManagerForPost.fetchElement(fieldName: "id", fieldValue: "\(self.post.id ?? 0)") else { return }
-        print(comments.count)
+       
         comments.forEach({ (comment) in
-            let postCommentCoreData = PostCommentCoreData(context: coreDataManager.context)
-            postCommentCoreData.body = comment.body
-            postCommentCoreData.email = comment.email
-            postCommentCoreData.post = postCoreData
-            postCoreData.postComments?.adding(postCommentCoreData)
-            self.coreDataManager.saveElements()
+           // if let _ = coreDataManager.fetchElement(fieldName: "id", fieldValue: "\(comment.id ?? 0)") {
+                
+           // }else{
+              
+                let postCommentCoreData = PostCommentCoreData(context: coreDataManager.context)
+                postCommentCoreData.id = Int32(comment.id ?? 0)
+                postCommentCoreData.postId = Int32(comment.postId ?? 0)
+                postCommentCoreData.body = comment.body
+                postCommentCoreData.email = comment.email
+                postCommentCoreData.post = postCoreData
+                postCoreData.postComments?.adding(postCommentCoreData)
+                self.coreDataManager.saveElements()
+          //  }
+            
         })
     }
     //MARK:- Fetch all comments offline
     /// Fetch all comments from core data if connected offline
     private func fetchAllCommentsOffline(){
         var arrayOfComments = [PostComment]()
-        let postCommentsCoreData = coreDataManager.fetchElements().value
+        //print(self.post.id , "IDID")
+        let postCommentsCoreData = coreDataManager.fetchElements().value.filter({Int($0.postId) == (self.post.id ?? 0)})
+        print(postCommentsCoreData.count , "All elements")
         postCommentsCoreData.forEach({ (comment) in
             let postComments = PostComment(post: self.post, postId: self.post.id ?? 0, id: Int(comment.id), name: comment.name, email: comment.email, body: comment.body)
             arrayOfComments.append(postComments)

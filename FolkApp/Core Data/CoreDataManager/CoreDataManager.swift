@@ -64,6 +64,19 @@ class CoreDataManager<Element: Equatable> {
         }
     }
     
+    func deleteAllCommentsObjectsInCoreDataDepenedOn(PostId id: Int) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>.init()
+        fetchRequest.entity = NSEntityDescription.entity(forEntityName: self.entityName, in: context)
+        fetchRequest.predicate = NSPredicate(format: "postId CONTAINS[cd] %@", argumentArray: [id])
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        print("Here")
+        do {
+            try context.execute(batchDeleteRequest)
+        }catch{
+            print(error.localizedDescription , "With deleting elements in core data")
+        }
+    }
+    
     //MARK:- Fetch element
     /// Fetch elemenet
     /// - Parameters:

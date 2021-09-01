@@ -27,6 +27,15 @@ class PostCommentViewController: UIViewController , UITableViewDelegate {
         return tableView
     }()
     
+    let titleStatusLabelNoComments: UILabel = {
+      let label = UILabel()
+        label.text = "No comments loaded"
+        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.textColor = UIColor(named: kTEXTCOLOR)
+        label.isHidden = true
+        label.textAlignment = .center
+        return label
+    }()
     private let post: Post
     private var postCommentListVM: PostCommentListViewModel!
     private let dataService = DataService<[PostComment]>.init()
@@ -76,6 +85,8 @@ class PostCommentViewController: UIViewController , UITableViewDelegate {
     private func setupUI(){
         view.addSubview(tableView)
         tableView.easy.layout(Edges(0))
+        view.addSubview(titleStatusLabelNoComments)
+        titleStatusLabelNoComments.easy.layout(Center(0),Leading(16) , Trailing(16) , Height(35))
     }
     //MARK:- BindUI
     private func bindUI(){
@@ -86,7 +97,10 @@ class PostCommentViewController: UIViewController , UITableViewDelegate {
                 v.backgroundColor = .clear
                 cell.configureCell(postCommentVM: .init(postComment: comment))
             }.disposed(by: postCommentListVM.disposeBag)
+            
+            postCommentListVM.comments.map({$0.count > 0 ? true : false}).bind(to: titleStatusLabelNoComments.rx.isHidden).disposed(by: postCommentListVM.disposeBag)
         }
+        
     }
     //MARK:- Table view header
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
