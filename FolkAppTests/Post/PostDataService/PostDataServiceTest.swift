@@ -45,5 +45,17 @@ class PostDataServiceTest: XCTestCase {
         wait(for: [expectation], timeout: 0)
         XCTAssertTrue(allPosts.count == 0, "Must get empty posts")
     }
+    
+    func testPostDataService_WithIncorrectPostsURL_ShouldReturnEmptyPosts(){
+        var allPosts = [Post]()
+        let expectation = self.expectation(description: "With Incorrect PostsURL")
+        dataService.fetch(url: kPOSTSURL + "a").subscribe(onNext: { (posts) in
+            allPosts = posts
+            expectation.fulfill()
+        }).disposed(by: disposeBag)
+        wait(for: [expectation], timeout: 0)
+        XCTAssertTrue(allPosts.count == 0, "Must get empty posts")
+        
+    }
 
 }

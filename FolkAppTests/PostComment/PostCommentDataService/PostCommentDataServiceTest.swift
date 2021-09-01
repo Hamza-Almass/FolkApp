@@ -46,5 +46,16 @@ class PostCommentDataServiceTest: XCTestCase {
         wait(for: [expectation], timeout: 0)
         XCTAssertTrue(allComments.count == 0 , "Must get empty array of comments")
     }
+    
+    func testPostComment_WithIncorrectPostCommentURL_ShouldReturnEmptyComments(){
+        var allComments = [PostComment]()
+        let expectation = self.expectation(description: "Without post comment url")
+        dataService.fetch(url: getPostCommentURL(id: 0)).subscribe(onNext: { (comments) in
+            allComments = comments
+            expectation.fulfill()
+        }).disposed(by: disposeBag)
+        wait(for: [expectation], timeout: 0)
+        XCTAssertTrue(allComments.count == 0 , "Must get empty array of comments")
+    }
 
 }
